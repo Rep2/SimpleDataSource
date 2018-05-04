@@ -52,6 +52,12 @@ That's it! The reusable data source manages the cell creation and data presentat
 github "Rep2/ReusableDataSource" ~> 0.1
 ```
 
+### CocoaPods
+
+```
+pod 'ReusableDataSource', '~> 0.1'
+```
+
 ## Detailed overview
 
 ```ReusablePresenter``` defines a view model type that the reusable view can present.
