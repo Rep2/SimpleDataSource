@@ -18,6 +18,11 @@
 		F68F11A2209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1198209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift */; };
 		F68F11A3209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119A209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift */; };
 		F68F11A4209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119B209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift */; };
+		F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11AB209CFF7300BADC8D /* AppDelegate.swift */; };
+		F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11AD209CFF7300BADC8D /* ViewController.swift */; };
+		F68F11B1209CFF7300BADC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11AF209CFF7300BADC8D /* Main.storyboard */; };
+		F68F11B3209CFF7400BADC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B2209CFF7400BADC8D /* Assets.xcassets */; };
+		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F68F1172209CE0F600BADC8D;
 			remoteInfo = ReusableDataSource;
+		};
+		F68F11BD209CFF7500BADC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F68F116A209CE0F600BADC8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68F11A8209CFF7300BADC8D;
+			remoteInfo = ReusableDataSourceDemo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +57,15 @@
 		F68F1198209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTableViewPresentableViewModel.swift; sourceTree = "<group>"; };
 		F68F119A209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		F68F119B209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewPresentableViewModel.swift; sourceTree = "<group>"; };
+		F68F11A9209CFF7300BADC8D /* ReusableDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusableDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F11AB209CFF7300BADC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F68F11AD209CFF7300BADC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F68F11B0209CFF7300BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F68F11B2209CFF7400BADC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F68F11B5209CFF7400BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F68F11B7209CFF7400BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68F11BC209CFF7400BADC8D /* ReusableDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F11C2209CFF7500BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +84,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68F11A6209CFF7300BADC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F11B9209CFF7400BADC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				F68F1175209CE0F600BADC8D /* ReusableDataSource */,
+				F68F11AA209CFF7300BADC8D /* ReusableDataSourceDemo */,
+				F68F11BF209CFF7500BADC8D /* ReusableDataSourceDemoTests */,
 				F68F1174209CE0F600BADC8D /* Products */,
 				F68F1180209CE0F600BADC8D /* ReusableDataSourceTests */,
 			);
@@ -80,6 +117,8 @@
 			children = (
 				F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */,
 				F68F117C209CE0F600BADC8D /* ReusableDataSourceTests.xctest */,
+				F68F11A9209CFF7300BADC8D /* ReusableDataSourceDemo.app */,
+				F68F11BC209CFF7400BADC8D /* ReusableDataSourceDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +189,27 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		F68F11AA209CFF7300BADC8D /* ReusableDataSourceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F68F11AB209CFF7300BADC8D /* AppDelegate.swift */,
+				F68F11AD209CFF7300BADC8D /* ViewController.swift */,
+				F68F11AF209CFF7300BADC8D /* Main.storyboard */,
+				F68F11B2209CFF7400BADC8D /* Assets.xcassets */,
+				F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */,
+				F68F11B7209CFF7400BADC8D /* Info.plist */,
+			);
+			path = ReusableDataSourceDemo;
+			sourceTree = "<group>";
+		};
+		F68F11BF209CFF7500BADC8D /* ReusableDataSourceDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F68F11C2209CFF7500BADC8D /* Info.plist */,
+			);
+			path = ReusableDataSourceDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,6 +261,41 @@
 			productReference = F68F117C209CE0F600BADC8D /* ReusableDataSourceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F68F11A8209CFF7300BADC8D /* ReusableDataSourceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "ReusableDataSourceDemo" */;
+			buildPhases = (
+				F68F11A5209CFF7300BADC8D /* Sources */,
+				F68F11A6209CFF7300BADC8D /* Frameworks */,
+				F68F11A7209CFF7300BADC8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReusableDataSourceDemo;
+			productName = ReusableDataSourceDemo;
+			productReference = F68F11A9209CFF7300BADC8D /* ReusableDataSourceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F68F11BB209CFF7400BADC8D /* ReusableDataSourceDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "ReusableDataSourceDemoTests" */;
+			buildPhases = (
+				F68F11B8209CFF7400BADC8D /* Sources */,
+				F68F11B9209CFF7400BADC8D /* Frameworks */,
+				F68F11BA209CFF7400BADC8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F68F11BE209CFF7500BADC8D /* PBXTargetDependency */,
+			);
+			name = ReusableDataSourceDemoTests;
+			productName = ReusableDataSourceDemoTests;
+			productReference = F68F11BC209CFF7400BADC8D /* ReusableDataSourceDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +312,13 @@
 					F68F117B209CE0F600BADC8D = {
 						CreatedOnToolsVersion = 9.3;
 					};
+					F68F11A8209CFF7300BADC8D = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F68F11BB209CFF7400BADC8D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F68F11A8209CFF7300BADC8D;
+					};
 				};
 			};
 			buildConfigurationList = F68F116D209CE0F600BADC8D /* Build configuration list for PBXProject "ReusableDataSource" */;
@@ -225,6 +327,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F68F1169209CE0F600BADC8D;
 			productRefGroup = F68F1174209CE0F600BADC8D /* Products */;
@@ -233,6 +336,8 @@
 			targets = (
 				F68F1172209CE0F600BADC8D /* ReusableDataSource */,
 				F68F117B209CE0F600BADC8D /* ReusableDataSourceTests */,
+				F68F11A8209CFF7300BADC8D /* ReusableDataSourceDemo */,
+				F68F11BB209CFF7400BADC8D /* ReusableDataSourceDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +351,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F68F117A209CE0F600BADC8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F11A7209CFF7300BADC8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */,
+				F68F11B3209CFF7400BADC8D /* Assets.xcassets in Resources */,
+				F68F11B1209CFF7300BADC8D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F11BA209CFF7400BADC8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,6 +417,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68F11A5209CFF7300BADC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */,
+				F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F11B8209CFF7400BADC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -303,7 +441,31 @@
 			target = F68F1172209CE0F600BADC8D /* ReusableDataSource */;
 			targetProxy = F68F117E209CE0F600BADC8D /* PBXContainerItemProxy */;
 		};
+		F68F11BE209CFF7500BADC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68F11A8209CFF7300BADC8D /* ReusableDataSourceDemo */;
+			targetProxy = F68F11BD209CFF7500BADC8D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F68F11AF209CFF7300BADC8D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68F11B0209CFF7300BADC8D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68F11B5209CFF7400BADC8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F68F1185209CE0F600BADC8D /* Debug */ = {
@@ -516,6 +678,84 @@
 			};
 			name = Release;
 		};
+		F68F11C4209CFF7500BADC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = ReusableDataSourceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F68F11C5209CFF7500BADC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = ReusableDataSourceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F68F11C7209CFF7500BADC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = ReusableDataSourceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReusableDataSourceDemo.app/ReusableDataSourceDemo";
+			};
+			name = Debug;
+		};
+		F68F11C8209CFF7500BADC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = ReusableDataSourceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReusableDataSourceDemo.app/ReusableDataSourceDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,6 +782,24 @@
 			buildConfigurations = (
 				F68F118B209CE0F600BADC8D /* Debug */,
 				F68F118C209CE0F600BADC8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "ReusableDataSourceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68F11C4209CFF7500BADC8D /* Debug */,
+				F68F11C5209CFF7500BADC8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "ReusableDataSourceDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68F11C7209CFF7500BADC8D /* Debug */,
+				F68F11C8209CFF7500BADC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
