@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F68F117D209CE0F600BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; };
-		F68F1182209CE0F600BADC8D /* ReusableDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1181209CE0F600BADC8D /* ReusableDataSourceTests.swift */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		F68F1176209CE0F600BADC8D /* ReusableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReusableDataSource.h; sourceTree = "<group>"; };
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F117C209CE0F600BADC8D /* ReusableDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68F1181209CE0F600BADC8D /* ReusableDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableDataSourceTests.swift; sourceTree = "<group>"; };
 		F68F1183209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 		F68F1180209CE0F600BADC8D /* ReusableDataSourceTests */ = {
 			isa = PBXGroup;
 			children = (
-				F68F1181209CE0F600BADC8D /* ReusableDataSourceTests.swift */,
 				F68F1183209CE0F600BADC8D /* Info.plist */,
 			);
 			path = ReusableDataSourceTests;
@@ -108,6 +105,7 @@
 				F68F116F209CE0F600BADC8D /* Frameworks */,
 				F68F1170209CE0F600BADC8D /* Headers */,
 				F68F1171209CE0F600BADC8D /* Resources */,
+				F68F118D209CE11D00BADC8D /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -189,6 +187,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F68F118D209CE11D00BADC8D /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F68F116E209CE0F600BADC8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -201,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F1182209CE0F600BADC8D /* ReusableDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
