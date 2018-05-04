@@ -3,10 +3,24 @@ import UIKit
 public class ReusableTableViewDataSource: NSObject, UITableViewDataSource {
     var presentableViewModels = [[AnyTableViewPresentableViewModel]]()
 
+    public var automaticallyRegisterCells: Bool
+
+    public init(automaticallyRegisterCells: Bool = true) {
+        self.automaticallyRegisterCells = automaticallyRegisterCells
+    }
+
+    public func present(presentableViewModels: [AnyTableViewPresentableViewModel], on tableView: UITableView) {
+        present(presentableViewModels: [presentableViewModels], on: tableView)
+    }
+
     public func present(presentableViewModels: [[AnyTableViewPresentableViewModel]], on tableView: UITableView) {
         self.presentableViewModels = presentableViewModels
 
-        presentableViewModels.flatMap { $0 }.forEach { $0.registerCellCallback(tableView) }
+        if automaticallyRegisterCells {
+            presentableViewModels
+                .flatMap { $0 }
+                .forEach { $0.registerCellCallback(tableView) }
+        }
 
         tableView.reloadData()
     }

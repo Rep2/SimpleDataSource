@@ -1,4 +1,4 @@
-public struct PresentableViewModel<Presenter: ReusableViewModelPresenter> {
+public struct ReusableViewModel<Presenter: ReusableViewModelPresenter> {
     public let viewModel: Presenter.ViewModel
 
     public init(viewModel: Presenter.ViewModel) {

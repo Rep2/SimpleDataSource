@@ -3,12 +3,24 @@ import UIKit
 public class ReusableCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     var presentableViewModels = [[AnyCollectionViewPresentableViewModel]]()
 
+    public var automaticallyRegisterCells: Bool
+
+    public init(automaticallyRegisterCells: Bool = true) {
+        self.automaticallyRegisterCells = automaticallyRegisterCells
+    }
+
+    public func present(presentableViewModels: [AnyCollectionViewPresentableViewModel], on collectionView: UICollectionView) {
+        present(presentableViewModels: [presentableViewModels], on: collectionView)
+    }
+
     public func present(presentableViewModels: [[AnyCollectionViewPresentableViewModel]], on collectionView: UICollectionView) {
         self.presentableViewModels = presentableViewModels
 
-        presentableViewModels
-            .flatMap { $0 }
-            .forEach { $0.registerCellCallback(collectionView) }
+        if automaticallyRegisterCells {
+            presentableViewModels
+                .flatMap { $0 }
+                .forEach { $0.registerCellCallback(collectionView) }
+        }
 
         collectionView.reloadData()
     }
