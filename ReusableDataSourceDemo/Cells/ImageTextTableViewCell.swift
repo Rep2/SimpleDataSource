@@ -6,7 +6,7 @@ struct ImageTextTableViewCellViewModel {
     let imageViewModel: UIImage
 }
 
-class ImageTextTableViewCell: UITableViewCell, ReusableViewModelPresenter {
+class ImageTextTableViewCell: UITableViewCell, ReusablePresenter {
     func present(viewModel: ImageTextTableViewCellViewModel) {
         textLabel?.text = viewModel.textViewModel
         imageView?.image = viewModel.imageViewModel

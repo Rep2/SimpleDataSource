@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		F68F117D209CE0F600BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F68F119C209CE1CB00BADC8D /* ReusableViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */; };
-		F68F119D209CE1CB00BADC8D /* ReusableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */; };
+		F68F119C209CE1CB00BADC8D /* ReusablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* ReusablePresenter.swift */; };
+		F68F119D209CE1CB00BADC8D /* ReusablePresenterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1190209CE1CA00BADC8D /* ReusablePresenterSource.swift */; };
 		F68F119E209CE1CB00BADC8D /* ReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1191209CE1CA00BADC8D /* ReusableViewModel.swift */; };
 		F68F119F209CE1CB00BADC8D /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1193209CE1CB00BADC8D /* UICollectionView.swift */; };
 		F68F11A0209CE1CB00BADC8D /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1194209CE1CB00BADC8D /* UITableView.swift */; };
@@ -73,8 +73,8 @@
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F117C209CE0F600BADC8D /* ReusableDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1183209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewModelPresenter.swift; sourceTree = "<group>"; };
-		F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewSource.swift; sourceTree = "<group>"; };
+		F68F118F209CE1CA00BADC8D /* ReusablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusablePresenter.swift; sourceTree = "<group>"; };
+		F68F1190209CE1CA00BADC8D /* ReusablePresenterSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusablePresenterSource.swift; sourceTree = "<group>"; };
 		F68F1191209CE1CA00BADC8D /* ReusableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewModel.swift; sourceTree = "<group>"; };
 		F68F1193209CE1CB00BADC8D /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F68F1194209CE1CB00BADC8D /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				F68F1191209CE1CA00BADC8D /* ReusableViewModel.swift */,
-				F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */,
-				F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */,
+				F68F118F209CE1CA00BADC8D /* ReusablePresenter.swift */,
+				F68F1190209CE1CA00BADC8D /* ReusablePresenterSource.swift */,
 			);
 			path = ReusableViewModel;
 			sourceTree = "<group>";
@@ -438,7 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F119D209CE1CB00BADC8D /* ReusableViewSource.swift in Sources */,
+				F68F119D209CE1CB00BADC8D /* ReusablePresenterSource.swift in Sources */,
 				F68F119E209CE1CB00BADC8D /* ReusableViewModel.swift in Sources */,
 				F68F11A0209CE1CB00BADC8D /* UITableView.swift in Sources */,
 				F68F11A1209CE1CB00BADC8D /* ReusableTableViewDataSource.swift in Sources */,
@@ -446,7 +446,7 @@
 				F68F11A2209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */,
 				F68F11A4209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */,
 				F68F11A3209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift in Sources */,
-				F68F119C209CE1CB00BADC8D /* ReusableViewModelPresenter.swift in Sources */,
+				F68F119C209CE1CB00BADC8D /* ReusablePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

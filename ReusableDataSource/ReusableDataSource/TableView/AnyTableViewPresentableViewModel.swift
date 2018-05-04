@@ -4,7 +4,7 @@ public class AnyTableViewPresentableViewModel {
     public let dequeueAndPresentCellCallback: (UITableView) -> UITableViewCell
     public let registerCellCallback: (UITableView) -> Void
 
-    public init<Presenter: ReusableViewModelPresenter>(base: ReusableViewModel<Presenter>) where Presenter: UITableViewCell {
+    public init<Presenter: ReusablePresenter>(base: ReusableViewModel<Presenter>) where Presenter: UITableViewCell {
         self.dequeueAndPresentCellCallback = { (tableView: UITableView) -> UITableViewCell in
             tableView.dequeueAndPresent(presentableViewModel: base, for: IndexPath(item: 0, section: 0))
         }

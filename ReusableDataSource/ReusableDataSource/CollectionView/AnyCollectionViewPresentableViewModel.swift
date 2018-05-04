@@ -4,7 +4,7 @@ public class AnyCollectionViewPresentableViewModel {
     let dequeueAndPresentCellCallback: (UICollectionView) -> UICollectionViewCell
     let registerCellCallback: (UICollectionView) -> Void
 
-    public init<Presenter: ReusableViewModelPresenter>(base: ReusableViewModel<Presenter>) where Presenter: UICollectionViewCell {
+    public init<Presenter: ReusablePresenter>(base: ReusableViewModel<Presenter>) where Presenter: UICollectionViewCell {
         self.dequeueAndPresentCellCallback = { (collectionView: UICollectionView) -> UICollectionViewCell in
             collectionView.dequeueAndPresent(presentableViewModel: base, for: IndexPath(item: 0, section: 0))
         }
@@ -16,7 +16,7 @@ public class AnyCollectionViewPresentableViewModel {
 }
 
 extension ReusableViewModel where Presenter: UICollectionViewCell {
-    public var any: AnyCollectionViewPresentableViewModel {
+    public var anyPresentable: AnyCollectionViewPresentableViewModel {
         return AnyCollectionViewPresentableViewModel(base: self)
     }
 }

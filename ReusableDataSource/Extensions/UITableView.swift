@@ -6,7 +6,7 @@ extension UITableView {
 
      - Important: Call before `dequeueReusableCell(for:)` to avoid `NSInternalInconsistencyException`.
      */
-    public func register<T: UITableViewCell>(cell: T.Type, reusableCellSource: ReusableViewSource) {
+    public func register<T: UITableViewCell>(cell: T.Type, reusableCellSource: ReusablePresenterSource) {
         switch reusableCellSource {
         case .nib:
             register(UINib(nibName: String(describing: cell), bundle: nil), forCellReuseIdentifier: String(describing: cell))
@@ -38,7 +38,7 @@ extension UITableView {
 
      - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the `PresentingCell` type isn't previously registered.
      */
-    func dequeueAndPresent<Presenter: ReusableViewModelPresenter>(presentableViewModel: ReusableViewModel<Presenter>, for indexPath: IndexPath) -> Presenter
+    func dequeueAndPresent<Presenter: ReusablePresenter>(presentableViewModel: ReusableViewModel<Presenter>, for indexPath: IndexPath) -> Presenter
         where Presenter: UITableViewCell {
         let cell = dequeueReusableCell(for: indexPath) as Presenter
 

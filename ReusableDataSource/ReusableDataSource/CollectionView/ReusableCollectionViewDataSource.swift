@@ -1,12 +1,12 @@
 import UIKit
 
-public class ReusableCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+open class ReusableCollectionViewDataSource: NSObject {
     var presentableViewModels = [[AnyCollectionViewPresentableViewModel]]()
 
-    public var automaticallyRegisterCells: Bool
+    public var automaticallyRegisterReuseIdentifiers: Bool
 
-    public init(automaticallyRegisterCells: Bool = true) {
-        self.automaticallyRegisterCells = automaticallyRegisterCells
+    public init(automaticallyRegisterReuseIdentifiers: Bool = true) {
+        self.automaticallyRegisterReuseIdentifiers = automaticallyRegisterReuseIdentifiers
     }
 
     public func present(presentableViewModels: [AnyCollectionViewPresentableViewModel], on collectionView: UICollectionView) {
@@ -16,7 +16,7 @@ public class ReusableCollectionViewDataSource: NSObject, UICollectionViewDataSou
     public func present(presentableViewModels: [[AnyCollectionViewPresentableViewModel]], on collectionView: UICollectionView) {
         self.presentableViewModels = presentableViewModels
 
-        if automaticallyRegisterCells {
+        if automaticallyRegisterReuseIdentifiers {
             presentableViewModels
                 .flatMap { $0 }
                 .forEach { $0.registerCellCallback(collectionView) }
@@ -24,16 +24,18 @@ public class ReusableCollectionViewDataSource: NSObject, UICollectionViewDataSou
 
         collectionView.reloadData()
     }
+}
 
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension ReusableCollectionViewDataSource: UICollectionViewDataSource {
+    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return presentableViewModels[section].count
     }
 
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView)
     }
 
-    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+    open func numberOfSections(in collectionView: UICollectionView) -> Int {
         return presentableViewModels.count
     }
 }

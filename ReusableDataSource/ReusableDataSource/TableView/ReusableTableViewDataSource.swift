@@ -1,12 +1,12 @@
 import UIKit
 
-public class ReusableTableViewDataSource: NSObject, UITableViewDataSource {
+open class ReusableTableViewDataSource: NSObject {
     var presentableViewModels = [[AnyTableViewPresentableViewModel]]()
 
-    public var automaticallyRegisterCells: Bool
+    public var automaticallyRegisterReuseIdentifiers: Bool
 
-    public init(automaticallyRegisterCells: Bool = true) {
-        self.automaticallyRegisterCells = automaticallyRegisterCells
+    public init(automaticallyRegisterReuseIdentifiers: Bool = true) {
+        self.automaticallyRegisterReuseIdentifiers = automaticallyRegisterReuseIdentifiers
     }
 
     public func present(presentableViewModels: [AnyTableViewPresentableViewModel], on tableView: UITableView) {
@@ -16,7 +16,7 @@ public class ReusableTableViewDataSource: NSObject, UITableViewDataSource {
     public func present(presentableViewModels: [[AnyTableViewPresentableViewModel]], on tableView: UITableView) {
         self.presentableViewModels = presentableViewModels
 
-        if automaticallyRegisterCells {
+        if automaticallyRegisterReuseIdentifiers {
             presentableViewModels
                 .flatMap { $0 }
                 .forEach { $0.registerCellCallback(tableView) }
@@ -24,16 +24,18 @@ public class ReusableTableViewDataSource: NSObject, UITableViewDataSource {
 
         tableView.reloadData()
     }
+}
 
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+extension ReusableTableViewDataSource: UITableViewDataSource {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView)
     }
 
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presentableViewModels[section].count
     }
 
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    open func numberOfSections(in tableView: UITableView) -> Int {
         return presentableViewModels.count
     }
 }
