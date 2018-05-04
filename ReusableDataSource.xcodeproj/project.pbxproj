@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		F68F117D209CE0F600BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F68F119C209CE1CB00BADC8D /* ReusableViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */; };
+		F68F119D209CE1CB00BADC8D /* ReusableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */; };
+		F68F119E209CE1CB00BADC8D /* PresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1191209CE1CA00BADC8D /* PresentableViewModel.swift */; };
+		F68F119F209CE1CB00BADC8D /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1193209CE1CB00BADC8D /* UICollectionView.swift */; };
+		F68F11A0209CE1CB00BADC8D /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1194209CE1CB00BADC8D /* UITableView.swift */; };
+		F68F11A1209CE1CB00BADC8D /* ReusableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1197209CE1CB00BADC8D /* ReusableTableViewDataSource.swift */; };
+		F68F11A2209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1198209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift */; };
+		F68F11A3209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119A209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift */; };
+		F68F11A4209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119B209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,15 @@
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F117C209CE0F600BADC8D /* ReusableDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1183209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewModelPresenter.swift; sourceTree = "<group>"; };
+		F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewSource.swift; sourceTree = "<group>"; };
+		F68F1191209CE1CA00BADC8D /* PresentableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentableViewModel.swift; sourceTree = "<group>"; };
+		F68F1193209CE1CB00BADC8D /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F68F1194209CE1CB00BADC8D /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F68F1197209CE1CB00BADC8D /* ReusableTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableTableViewDataSource.swift; sourceTree = "<group>"; };
+		F68F1198209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTableViewPresentableViewModel.swift; sourceTree = "<group>"; };
+		F68F119A209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewPresentableViewModel.swift; sourceTree = "<group>"; };
+		F68F119B209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +87,9 @@
 		F68F1175209CE0F600BADC8D /* ReusableDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				F68F1192209CE1CB00BADC8D /* Extensions */,
+				F68F1195209CE1CB00BADC8D /* GenericDataSource */,
+				F68F118E209CE1CA00BADC8D /* Presentable */,
 				F68F1176209CE0F600BADC8D /* ReusableDataSource.h */,
 				F68F1177209CE0F600BADC8D /* Info.plist */,
 			);
@@ -81,6 +102,52 @@
 				F68F1183209CE0F600BADC8D /* Info.plist */,
 			);
 			path = ReusableDataSourceTests;
+			sourceTree = "<group>";
+		};
+		F68F118E209CE1CA00BADC8D /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				F68F118F209CE1CA00BADC8D /* ReusableViewModelPresenter.swift */,
+				F68F1190209CE1CA00BADC8D /* ReusableViewSource.swift */,
+				F68F1191209CE1CA00BADC8D /* PresentableViewModel.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		F68F1192209CE1CB00BADC8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F68F1193209CE1CB00BADC8D /* UICollectionView.swift */,
+				F68F1194209CE1CB00BADC8D /* UITableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F68F1195209CE1CB00BADC8D /* GenericDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F68F1196209CE1CB00BADC8D /* TableView */,
+				F68F1199209CE1CB00BADC8D /* CollectionView */,
+			);
+			path = GenericDataSource;
+			sourceTree = "<group>";
+		};
+		F68F1196209CE1CB00BADC8D /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F68F1197209CE1CB00BADC8D /* ReusableTableViewDataSource.swift */,
+				F68F1198209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F68F1199209CE1CB00BADC8D /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F68F119A209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift */,
+				F68F119B209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68F119D209CE1CB00BADC8D /* ReusableViewSource.swift in Sources */,
+				F68F119E209CE1CB00BADC8D /* PresentableViewModel.swift in Sources */,
+				F68F11A0209CE1CB00BADC8D /* UITableView.swift in Sources */,
+				F68F11A1209CE1CB00BADC8D /* ReusableTableViewDataSource.swift in Sources */,
+				F68F119F209CE1CB00BADC8D /* UICollectionView.swift in Sources */,
+				F68F11A2209CE1CB00BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */,
+				F68F11A4209CE1CB00BADC8D /* ReusableCollectionViewDataSource.swift in Sources */,
+				F68F11A3209CE1CB00BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */,
+				F68F119C209CE1CB00BADC8D /* ReusableViewModelPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +438,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ReusableDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +464,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ReusableDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +481,7 @@
 		F68F118B209CE0F600BADC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = ReusableDataSourceTests/Info.plist;
@@ -421,6 +500,7 @@
 		F68F118C209CE0F600BADC8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = ReusableDataSourceTests/Info.plist;
