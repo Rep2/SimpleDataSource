@@ -1,25 +1,20 @@
-//
-//  ViewController.swift
-//  ReusableDataSourceDemo
-//
-//  Created by Ivan Rep on 04/05/2018.
-//  Copyright © 2018 Rep. All rights reserved.
-//
-
+import ReusableDataSource
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    let dataSource = ReusableTableViewDataSource()
+
+    lazy var reusableViewModels = [
+        ReusableViewModel<TextTableViewCell>(viewModel: TextTableViewCellViewModel(textViewModel: "Cell 1")).anyPresentable,
+        ReusableViewModel<TextTableViewCell>(viewModel: TextTableViewCellViewModel(textViewModel: "Cell 2")).anyPresentable,
+        ReusableViewModel<ImageTextTableViewCell>(viewModel: ImageTextTableViewCellViewModel(textViewModel: "Cell 3", imageViewModel: #imageLiteral(resourceName: "filter"))).anyPresentable,
+        ReusableViewModel<TextTableViewCell>(viewModel: TextTableViewCellViewModel(textViewModel: "Cell 2")).anyPresentable
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        tableView.dataSource = dataSource
+        dataSource.present(presentableViewModels: reusableViewModels, on: tableView)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

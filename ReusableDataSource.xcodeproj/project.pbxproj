@@ -23,6 +23,10 @@
 		F68F11B1209CFF7300BADC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11AF209CFF7300BADC8D /* Main.storyboard */; };
 		F68F11B3209CFF7400BADC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B2209CFF7400BADC8D /* Assets.xcassets */; };
 		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
+		F68F11CC209CFFC900BADC8D /* ImageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */; };
+		F68F11CD209CFFC900BADC8D /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */; };
+		F68F11CE209D052B00BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; };
+		F68F11CF209D052B00BADC8D /* ReusableDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,28 @@
 			remoteGlobalIDString = F68F11A8209CFF7300BADC8D;
 			remoteInfo = ReusableDataSourceDemo;
 		};
+		F68F11D0209D052B00BADC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F68F116A209CE0F600BADC8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68F1172209CE0F600BADC8D;
+			remoteInfo = ReusableDataSource;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F68F11D2209D052B00BADC8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F68F11CF209D052B00BADC8D /* ReusableDataSource.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReusableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +91,8 @@
 		F68F11B7209CFF7400BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F11BC209CFF7400BADC8D /* ReusableDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11C2209CFF7500BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextTableViewCell.swift; sourceTree = "<group>"; };
+		F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68F11CE209D052B00BADC8D /* ReusableDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +220,7 @@
 		F68F11AA209CFF7300BADC8D /* ReusableDataSourceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F68F11C9209CFFC900BADC8D /* Cells */,
 				F68F11AB209CFF7300BADC8D /* AppDelegate.swift */,
 				F68F11AD209CFF7300BADC8D /* ViewController.swift */,
 				F68F11AF209CFF7300BADC8D /* Main.storyboard */,
@@ -208,6 +237,15 @@
 				F68F11C2209CFF7500BADC8D /* Info.plist */,
 			);
 			path = ReusableDataSourceDemoTests;
+			sourceTree = "<group>";
+		};
+		F68F11C9209CFFC900BADC8D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */,
+				F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +306,12 @@
 				F68F11A5209CFF7300BADC8D /* Sources */,
 				F68F11A6209CFF7300BADC8D /* Frameworks */,
 				F68F11A7209CFF7300BADC8D /* Resources */,
+				F68F11D2209D052B00BADC8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F68F11D1209D052B00BADC8D /* PBXTargetDependency */,
 			);
 			name = ReusableDataSourceDemo;
 			productName = ReusableDataSourceDemo;
@@ -421,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68F11CD209CFFC900BADC8D /* TextTableViewCell.swift in Sources */,
 				F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */,
+				F68F11CC209CFFC900BADC8D /* ImageTextTableViewCell.swift in Sources */,
 				F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +487,11 @@
 			isa = PBXTargetDependency;
 			target = F68F11A8209CFF7300BADC8D /* ReusableDataSourceDemo */;
 			targetProxy = F68F11BD209CFF7500BADC8D /* PBXContainerItemProxy */;
+		};
+		F68F11D1209D052B00BADC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68F1172209CE0F600BADC8D /* ReusableDataSource */;
+			targetProxy = F68F11D0209D052B00BADC8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,6 +728,7 @@
 		F68F11C4209CFF7500BADC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
@@ -699,6 +747,7 @@
 		F68F11C5209CFF7500BADC8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
