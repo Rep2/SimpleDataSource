@@ -204,3 +204,7 @@ extension UITableView {
 ```
 
 This is also where the ```ReusablePresenterSource``` comes into play. Data source automatically registers ```reuseIdentifier``` based on ```ReusablePresenter.source``` property. To disable this behavior set data sources ```automaticallyRegisterReuseIdentifiers``` to ```fasle```.
+
+## License
+
+ReusableDataSource is available under the MIT license. See the LICENSE file for more info.
