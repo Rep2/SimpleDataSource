@@ -32,7 +32,7 @@ extension ReusableCollectionViewDataSource: UICollectionViewDataSource {
     }
 
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView)
+        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView, indexPath)
     }
 
     open func numberOfSections(in collectionView: UICollectionView) -> Int {

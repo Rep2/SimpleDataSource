@@ -1,12 +1,12 @@
 import UIKit
 
 public class AnyCollectionViewPresentableViewModel {
-    let dequeueAndPresentCellCallback: (UICollectionView) -> UICollectionViewCell
+    let dequeueAndPresentCellCallback: (UICollectionView, IndexPath) -> UICollectionViewCell
     let registerCellCallback: (UICollectionView) -> Void
 
     public init<Presenter: ReusablePresenter>(base: ReusableViewModel<Presenter>) where Presenter: UICollectionViewCell {
-        self.dequeueAndPresentCellCallback = { (collectionView: UICollectionView) -> UICollectionViewCell in
-            collectionView.dequeueAndPresent(presentableViewModel: base, for: IndexPath(item: 0, section: 0))
+        self.dequeueAndPresentCellCallback = { (collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell in
+            collectionView.dequeueAndPresent(presentableViewModel: base, for: indexPath)
         }
 
         self.registerCellCallback = { (collectionView: UICollectionView) in

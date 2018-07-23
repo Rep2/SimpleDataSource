@@ -28,7 +28,7 @@ open class ReusableTableViewDataSource: NSObject {
 
 extension ReusableTableViewDataSource: UITableViewDataSource {
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView)
+        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView, indexPath)
     }
 
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
