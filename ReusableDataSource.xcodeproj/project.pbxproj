@@ -348,12 +348,14 @@
 				TargetAttributes = {
 					F68F1172209CE0F600BADC8D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					F68F117B209CE0F600BADC8D = {
 						CreatedOnToolsVersion = 9.3;
 					};
 					F68F11A8209CFF7300BADC8D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					F68F11BB209CFF7400BADC8D = {
 						CreatedOnToolsVersion = 9.3;
@@ -656,7 +658,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -682,7 +684,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -739,7 +741,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -758,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.ReusableDataSourceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
