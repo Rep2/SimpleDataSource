@@ -17,7 +17,7 @@ open class DequeueableCollectionViewDataSource: NSObject, UICollectionViewDataSo
         if automaticallyRegisterReuseIdentifiers {
             viewModels
                 .flatMap { $0 }
-                .forEach { $0.registerCellCallback(collectionView) }
+                .forEach { $0.registerCell(collectionView) }
         }
 
         collectionView.reloadData()
@@ -30,7 +30,7 @@ open class DequeueableCollectionViewDataSource: NSObject, UICollectionViewDataSo
 
 extension DequeueableCollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView, indexPath)
+        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCell(collectionView, indexPath)
     }
 
     open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

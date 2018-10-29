@@ -17,7 +17,7 @@ open class DequeueableTableViewDataSource: NSObject, UITableViewDataSource {
         if automaticallyRegisterReuseIdentifiers {
             viewModels
                 .flatMap { $0 }
-                .forEach { $0.registerCellCallback(tableView) }
+                .forEach { $0.registerCell(tableView) }
         }
 
         tableView.reloadData()
@@ -30,7 +30,7 @@ open class DequeueableTableViewDataSource: NSObject, UITableViewDataSource {
 
 extension DequeueableTableViewDataSource {
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView, indexPath)
+        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCell(tableView, indexPath)
     }
 
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
