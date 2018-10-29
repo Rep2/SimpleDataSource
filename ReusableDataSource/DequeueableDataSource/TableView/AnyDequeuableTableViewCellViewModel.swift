@@ -1,6 +1,6 @@
 import UIKit
 
-public class AnyTableViewPresentableViewModel {
+public class AnyDequeuableTableViewCellViewModel {
     public let dequeueAndPresentCellCallback: (UITableView, IndexPath) -> UITableViewCell
     public let registerCellCallback: (UITableView) -> Void
 

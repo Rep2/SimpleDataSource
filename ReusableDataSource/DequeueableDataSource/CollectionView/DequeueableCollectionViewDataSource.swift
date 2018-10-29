@@ -1,20 +1,20 @@
 import UIKit
 
-public protocol ReusableCollectionViewDataSource: UICollectionViewDataSource {
-    var viewModels: [[AnyCollectionViewPresentableViewModel]] { get set }
+public protocol DequeueableCollectionViewDataSource: UICollectionViewDataSource {
+    var viewModels: [[AnyDequeuableCollectionViewCellViewModel]] { get set }
 
     var automaticallyRegisterReuseIdentifiers: Bool { get }
 
-    func reload(viewModels: [[AnyCollectionViewPresentableViewModel]], onCollectionView collectionView: UICollectionView)
-    func reload(viewModels: [AnyCollectionViewPresentableViewModel], onCollectionView collectionView: UICollectionView)
+    func reload(viewModels: [[AnyDequeuableCollectionViewCellViewModel]], onCollectionView collectionView: UICollectionView)
+    func reload(viewModels: [AnyDequeuableCollectionViewCellViewModel], onCollectionView collectionView: UICollectionView)
 }
 
-extension ReusableCollectionViewDataSource {
+extension DequeueableCollectionViewDataSource {
     var automaticallyRegisterReuseIdentifiers: Bool {
         return true
     }
 
-    func reload(viewModels: [[AnyCollectionViewPresentableViewModel]], onCollectionView collectionView: UICollectionView) {
+    func reload(viewModels: [[AnyDequeuableCollectionViewCellViewModel]], onCollectionView collectionView: UICollectionView) {
         self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
@@ -26,12 +26,12 @@ extension ReusableCollectionViewDataSource {
         collectionView.reloadData()
     }
 
-    func reload(viewModels: [AnyCollectionViewPresentableViewModel], onCollectionView collectionView: UICollectionView) {
+    func reload(viewModels: [AnyDequeuableCollectionViewCellViewModel], onCollectionView collectionView: UICollectionView) {
         reload(viewModels: [viewModels], onCollectionView: collectionView)
     }
 }
 
-extension ReusableCollectionViewDataSource {
+extension DequeueableCollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView, indexPath)
     }

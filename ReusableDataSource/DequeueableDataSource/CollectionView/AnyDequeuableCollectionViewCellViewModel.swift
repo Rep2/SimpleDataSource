@@ -1,6 +1,6 @@
 import UIKit
 
-public class AnyCollectionViewPresentableViewModel {
+public class AnyDequeuableCollectionViewCellViewModel {
     public let dequeueAndPresentCellCallback: (UICollectionView, IndexPath) -> UICollectionViewCell
     public let registerCellCallback: (UICollectionView) -> Void
 

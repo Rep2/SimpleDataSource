@@ -1,20 +1,20 @@
 import UIKit
 
-public protocol ReusableTableViewDataSource: UITableViewDataSource {
-    var viewModels: [[AnyTableViewPresentableViewModel]] { get set }
+public protocol DequeueableTableViewDataSource: UITableViewDataSource {
+    var viewModels: [[AnyDequeuableTableViewCellViewModel]] { get set }
 
     var automaticallyRegisterReuseIdentifiers: Bool { get }
 
-    func reload(viewModels: [[AnyTableViewPresentableViewModel]], onTableView tableView: UITableView)
-    func reload(viewModels: [AnyTableViewPresentableViewModel], onTableView tableView: UITableView)
+    func reload(viewModels: [[AnyDequeuableTableViewCellViewModel]], onTableView tableView: UITableView)
+    func reload(viewModels: [AnyDequeuableTableViewCellViewModel], onTableView tableView: UITableView)
 }
 
-extension ReusableTableViewDataSource {
+extension DequeueableTableViewDataSource {
     var automaticallyRegisterReuseIdentifiers: Bool {
         return true
     }
 
-    func reload(viewModels: [[AnyTableViewPresentableViewModel]], onTableView tableView: UITableView) {
+    func reload(viewModels: [[AnyDequeuableTableViewCellViewModel]], onTableView tableView: UITableView) {
         self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
@@ -26,12 +26,12 @@ extension ReusableTableViewDataSource {
         tableView.reloadData()
     }
 
-    func reload(viewModels: [AnyTableViewPresentableViewModel], onTableView tableView: UITableView) {
+    func reload(viewModels: [AnyDequeuableTableViewCellViewModel], onTableView tableView: UITableView) {
         reload(viewModels: [viewModels], onTableView: tableView)
     }
 }
 
-extension ReusableTableViewDataSource {
+extension DequeueableTableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView, indexPath)
     }

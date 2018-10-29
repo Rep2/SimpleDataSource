@@ -22,8 +22,8 @@ extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UIColl
         collectionView.register(cell: CollectionViewCell.self, reusableCellSource: CollectionViewCell.source)
     }
 
-    var tableViewPresentable: AnyCollectionViewPresentableViewModel {
-        return AnyCollectionViewPresentableViewModel(
+    var tableViewPresentable: AnyDequeuableCollectionViewCellViewModel {
+        return AnyDequeuableCollectionViewCellViewModel(
             dequeueAndPresentCellCallback: { (collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell in
                 return self.dequeueReusableCell(forRowAt: indexPath, onCollectionView: collectionView)
             },
