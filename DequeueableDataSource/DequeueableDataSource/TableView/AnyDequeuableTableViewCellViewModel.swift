@@ -4,9 +4,9 @@ public class AnyDequeuableTableViewCellViewModel {
     public let dequeueAndPresentCell: (UITableView, IndexPath) -> UITableViewCell
     public let registerCell: (UITableView) -> Void
 
-    public init(dequeueAndPresentCellCallback: @escaping (UITableView, IndexPath) -> UITableViewCell,
-                registerCellCallback: @escaping (UITableView) -> Void) {
-        self.dequeueAndPresentCell = dequeueAndPresentCellCallback
-        self.registerCell = registerCellCallback
+    public init(dequeueAndPresentCell: @escaping (UITableView, IndexPath) -> UITableViewCell,
+                registerCell: @escaping (UITableView) -> Void) {
+        self.dequeueAndPresentCell = dequeueAndPresentCell
+        self.registerCell = registerCell
     }
 }

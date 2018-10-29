@@ -25,10 +25,10 @@ extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell 
 
     public var tableViewPresentable: AnyDequeuableTableViewCellViewModel {
         return AnyDequeuableTableViewCellViewModel(
-            dequeueAndPresentCellCallback: { (tableView: UITableView, indexPath: IndexPath) -> UITableViewCell in
+            dequeueAndPresentCell: { (tableView: UITableView, indexPath: IndexPath) -> UITableViewCell in
                 return self.dequeueReusableCell(forRowAt: indexPath, onTableView: tableView)
             },
-            registerCellCallback: { (tableView: UITableView) in
+            registerCell: { (tableView: UITableView) in
                 self.registerTableViewCell(onTableView: tableView)
             }
         )
