@@ -1,6 +1,6 @@
 import UIKit
 
-open class DequeueableTableViewDataSource: NSObject, UITableViewDataSource {
+open class AnyTableViewDataSource: NSObject, UITableViewDataSource {
     open var viewModels = [[AnyDequeuableTableViewCellViewModel]]()
 
     open var automaticallyRegisterReuseIdentifiers: Bool
@@ -11,7 +11,7 @@ open class DequeueableTableViewDataSource: NSObject, UITableViewDataSource {
         super.init()
     }
 
-    open func reload(viewModels: [[AnyDequeuableTableViewCellViewModel]], onTableView tableView: UITableView) {
+    open func present(viewModels: [[AnyDequeuableTableViewCellViewModel]], onTableView tableView: UITableView) {
         self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
@@ -23,12 +23,12 @@ open class DequeueableTableViewDataSource: NSObject, UITableViewDataSource {
         tableView.reloadData()
     }
 
-    open func reload(viewModels: [AnyDequeuableTableViewCellViewModel], onTableView tableView: UITableView) {
-        reload(viewModels: [viewModels], onTableView: tableView)
+    open func present(viewModels: [AnyDequeuableTableViewCellViewModel], onTableView tableView: UITableView) {
+        present(viewModels: [viewModels], onTableView: tableView)
     }
 }
 
-extension DequeueableTableViewDataSource {
+extension AnyTableViewDataSource {
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCell(tableView, indexPath)
     }

@@ -13,13 +13,13 @@ class ViewController: UITableViewController {
         ]
     ]
 
-    lazy var dataSource = DequeueableTableViewDataSource()
+    lazy var dataSource = AnyTableViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = dataSource
 
-        dataSource.reload(viewModels: viewModels, onTableView: tableView)
+        dataSource.present(viewModels: viewModels, onTableView: tableView)
     }
 }

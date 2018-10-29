@@ -1,6 +1,6 @@
 import UIKit
 
-open class DequeueableCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+open class AnyCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     open var viewModels = [[AnyDequeuableCollectionViewCellViewModel]]()
 
     open var automaticallyRegisterReuseIdentifiers: Bool
@@ -11,7 +11,7 @@ open class DequeueableCollectionViewDataSource: NSObject, UICollectionViewDataSo
         super.init()
     }
 
-    open func reload(viewModels: [[AnyDequeuableCollectionViewCellViewModel]], onCollectionView collectionView: UICollectionView) {
+    open func present(viewModels: [[AnyDequeuableCollectionViewCellViewModel]], onCollectionView collectionView: UICollectionView) {
         self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
@@ -23,12 +23,12 @@ open class DequeueableCollectionViewDataSource: NSObject, UICollectionViewDataSo
         collectionView.reloadData()
     }
 
-    open func reload(viewModels: [AnyDequeuableCollectionViewCellViewModel], onCollectionView collectionView: UICollectionView) {
-        reload(viewModels: [viewModels], onCollectionView: collectionView)
+    open func present(viewModels: [AnyDequeuableCollectionViewCellViewModel], onCollectionView collectionView: UICollectionView) {
+        present(viewModels: [viewModels], onCollectionView: collectionView)
     }
 }
 
-extension DequeueableCollectionViewDataSource {
+extension AnyCollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCell(collectionView, indexPath)
     }
