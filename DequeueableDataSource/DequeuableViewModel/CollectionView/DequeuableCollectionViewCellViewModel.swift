@@ -1,6 +1,6 @@
 import CollectionViewSimpleDequeue
 
-protocol DequeuableCollectionViewCellViewModel {
+public protocol DequeuableCollectionViewCellViewModel {
     associatedtype CollectionViewCell: PresentingTableViewCell
 
     func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> CollectionViewCell
@@ -8,7 +8,7 @@ protocol DequeuableCollectionViewCellViewModel {
 }
 
 extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UICollectionViewCell, CollectionViewCell.ViewModel == Self {
-    func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> CollectionViewCell {
+    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> CollectionViewCell {
         let cell = collectionView.dequeueReusableCell(for: indexPath) as CollectionViewCell
 
         cell.present(viewModel: self)
@@ -18,11 +18,11 @@ extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UIColl
 }
 
 extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UICollectionViewCell {
-    func registerTableViewCell(onCollectionView collectionView: UICollectionView) {
+    public func registerTableViewCell(onCollectionView collectionView: UICollectionView) {
         collectionView.register(cell: CollectionViewCell.self, reusableCellSource: CollectionViewCell.source)
     }
 
-    var tableViewPresentable: AnyDequeuableCollectionViewCellViewModel {
+    public var tableViewPresentable: AnyDequeuableCollectionViewCellViewModel {
         return AnyDequeuableCollectionViewCellViewModel(
             dequeueAndPresentCellCallback: { (collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell in
                 return self.dequeueReusableCell(forRowAt: indexPath, onCollectionView: collectionView)

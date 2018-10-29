@@ -1,6 +1,7 @@
-import TableViewCellSimpleDequeue
+import TableViewSimpleDequeue
+import UIKit
 
-protocol DequeuableTableViewCellViewModel {
+public protocol DequeuableTableViewCellViewModel {
     associatedtype TableViewCell: PresentingTableViewCell
 
     func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> TableViewCell
@@ -8,7 +9,7 @@ protocol DequeuableTableViewCellViewModel {
 }
 
 extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell, TableViewCell.ViewModel == Self {
-    func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> TableViewCell {
+    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> TableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as TableViewCell
 
         cell.present(viewModel: self)
@@ -18,11 +19,11 @@ extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell,
 }
 
 extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell {
-    func registerTableViewCell(onTableView tableView: UITableView) {
+    public func registerTableViewCell(onTableView tableView: UITableView) {
         tableView.register(cell: TableViewCell.self, reusableCellSource: TableViewCell.source)
     }
 
-    var tableViewPresentable: AnyDequeuableTableViewCellViewModel {
+    public var tableViewPresentable: AnyDequeuableTableViewCellViewModel {
         return AnyDequeuableTableViewCellViewModel(
             dequeueAndPresentCellCallback: { (tableView: UITableView, indexPath: IndexPath) -> UITableViewCell in
                 return self.dequeueReusableCell(forRowAt: indexPath, onTableView: tableView)

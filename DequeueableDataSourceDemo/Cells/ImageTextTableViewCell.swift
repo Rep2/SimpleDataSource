@@ -1,12 +1,14 @@
-import ReusableDataSource
+import DequeueableDataSource
 import UIKit
 
-struct ImageTextTableViewCellViewModel {
+struct ImageTextTableViewCellViewModel: DequeuableTableViewCellViewModel {
+    typealias TableViewCell = ImageTextTableViewCell
+
     let textViewModel: String
     let imageViewModel: UIImage
 }
 
-class ImageTextTableViewCell: UITableViewCell, ReusablePresenter {
+class ImageTextTableViewCell: UITableViewCell, PresentingTableViewCell {
     func present(viewModel: ImageTextTableViewCellViewModel) {
         textLabel?.text = viewModel.textViewModel
         imageView?.image = viewModel.imageViewModel
