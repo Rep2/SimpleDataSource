@@ -1,0 +1,9 @@
+[submodule "Carthage/Checkouts/CellSource"]
+	path = Carthage/Checkouts/CellSource
+	url = https://github.com/Rep2/CellSource.git
+[submodule "Carthage/Checkouts/TableViewCellSimpleDequeue"]
+	path = Carthage/Checkouts/TableViewCellSimpleDequeue
+	url = https://github.com/Rep2/TableViewCellSimpleDequeue.git
+[submodule "Carthage/Checkouts/CollectionViewSimpleDequeue"]
+	path = Carthage/Checkouts/CollectionViewSimpleDequeue
+	url = https://github.com/Rep2/CollectionViewSimpleDequeue.git
