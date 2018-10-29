@@ -13,7 +13,7 @@
 		F6149FF2218694FF00C178AA /* CollectionViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */; };
 		F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */; };
 		F6149FF6218696C300C178AA /* TableViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */; };
-		F68F117D209CE0F600BADC8D /* DequeueableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */; };
+		F68F117D209CE0F600BADC8D /* AnyDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */; };
 		F68F11A1209CE1CB00BADC8D /* AnyTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1197209CE1CB00BADC8D /* AnyTableViewDataSource.swift */; };
@@ -27,8 +27,8 @@
 		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
 		F68F11CC209CFFC900BADC8D /* ImageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */; };
 		F68F11CD209CFFC900BADC8D /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */; };
-		F68F11CE209D052B00BADC8D /* DequeueableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */; };
-		F68F11CF209D052B00BADC8D /* DequeueableDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F68F11CE209D052B00BADC8D /* AnyDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */; };
+		F68F11CF209D052B00BADC8D /* AnyDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D4AC1021869D0C0046C39D /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC0F21869D0C0046C39D /* CellSource.framework */; };
 		F6D4AC1121869D0C0046C39D /* CellSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC0F21869D0C0046C39D /* CellSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D4AC1421869D150046C39D /* TableViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */; };
@@ -69,7 +69,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F6D4AC1721869D150046C39D /* CollectionViewSimpleDequeue.framework in Embed Frameworks */,
-				F68F11CF209D052B00BADC8D /* DequeueableDataSource.framework in Embed Frameworks */,
+				F68F11CF209D052B00BADC8D /* AnyDataSource.framework in Embed Frameworks */,
 				F6D4AC1121869D0C0046C39D /* CellSource.framework in Embed Frameworks */,
 				F6D4AC1521869D150046C39D /* TableViewSimpleDequeue.framework in Embed Frameworks */,
 			);
@@ -86,24 +86,24 @@
 		F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionViewSimpleDequeue.framework; path = Carthage/Build/iOS/CollectionViewSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewSimpleDequeue.framework; sourceTree = "<group>"; };
-		F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DequeueableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F1173209CE0F600BADC8D /* AnyDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnyDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1176209CE0F600BADC8D /* ReusableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReusableDataSource.h; sourceTree = "<group>"; };
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68F117C209CE0F600BADC8D /* DequeueableDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DequeueableDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F117C209CE0F600BADC8D /* AnyDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1183209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingTableViewCell.swift; sourceTree = "<group>"; };
 		F68F1197209CE1CB00BADC8D /* AnyTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTableViewDataSource.swift; sourceTree = "<group>"; };
 		F68F1198209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDequeuableTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F68F119A209CE1CB00BADC8D /* AnyCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		F68F119B209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDequeuableCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
-		F68F11A9209CFF7300BADC8D /* DequeueableDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DequeueableDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F11A9209CFF7300BADC8D /* AnyDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11AB209CFF7300BADC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F68F11AD209CFF7300BADC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F68F11B0209CFF7300BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F68F11B2209CFF7400BADC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F68F11B5209CFF7400BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F68F11B7209CFF7400BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68F11BC209CFF7400BADC8D /* DequeueableDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DequeueableDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F11BC209CFF7400BADC8D /* AnyDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11C2209CFF7500BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextTableViewCell.swift; sourceTree = "<group>"; };
 		F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F117D209CE0F600BADC8D /* DequeueableDataSource.framework in Frameworks */,
+				F68F117D209CE0F600BADC8D /* AnyDataSource.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D4AC1621869D150046C39D /* CollectionViewSimpleDequeue.framework in Frameworks */,
-				F68F11CE209D052B00BADC8D /* DequeueableDataSource.framework in Frameworks */,
+				F68F11CE209D052B00BADC8D /* AnyDataSource.framework in Frameworks */,
 				F6D4AC1021869D0C0046C39D /* CellSource.framework in Frameworks */,
 				F6D4AC1421869D150046C39D /* TableViewSimpleDequeue.framework in Frameworks */,
 			);
@@ -187,11 +187,11 @@
 				F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */,
 				F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */,
 				F6D4AC0F21869D0C0046C39D /* CellSource.framework */,
-				F68F1175209CE0F600BADC8D /* DequeueableDataSource */,
-				F68F11AA209CFF7300BADC8D /* DequeueableDataSourceDemo */,
-				F68F11BF209CFF7500BADC8D /* DequeueableDataSourceDemoTests */,
+				F68F1175209CE0F600BADC8D /* AnyDataSource */,
+				F68F11AA209CFF7300BADC8D /* AnyDataSourceDemo */,
+				F68F11BF209CFF7500BADC8D /* AnyDataSourceDemoTests */,
 				F68F1174209CE0F600BADC8D /* Products */,
-				F68F1180209CE0F600BADC8D /* DequeueableDataSourceTests */,
+				F68F1180209CE0F600BADC8D /* AnyDataSourceTests */,
 				F6149FCA2186819F00C178AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -199,15 +199,15 @@
 		F68F1174209CE0F600BADC8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */,
-				F68F117C209CE0F600BADC8D /* DequeueableDataSourceTests.xctest */,
-				F68F11A9209CFF7300BADC8D /* DequeueableDataSourceDemo.app */,
-				F68F11BC209CFF7400BADC8D /* DequeueableDataSourceDemoTests.xctest */,
+				F68F1173209CE0F600BADC8D /* AnyDataSource.framework */,
+				F68F117C209CE0F600BADC8D /* AnyDataSourceTests.xctest */,
+				F68F11A9209CFF7300BADC8D /* AnyDataSourceDemo.app */,
+				F68F11BC209CFF7400BADC8D /* AnyDataSourceDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F68F1175209CE0F600BADC8D /* DequeueableDataSource */ = {
+		F68F1175209CE0F600BADC8D /* AnyDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				F68F118E209CE1CA00BADC8D /* DequeuableViewModel */,
@@ -215,15 +215,15 @@
 				F68F1177209CE0F600BADC8D /* Info.plist */,
 				F68F1176209CE0F600BADC8D /* ReusableDataSource.h */,
 			);
-			path = DequeueableDataSource;
+			path = AnyDataSource;
 			sourceTree = "<group>";
 		};
-		F68F1180209CE0F600BADC8D /* DequeueableDataSourceTests */ = {
+		F68F1180209CE0F600BADC8D /* AnyDataSourceTests */ = {
 			isa = PBXGroup;
 			children = (
 				F68F1183209CE0F600BADC8D /* Info.plist */,
 			);
-			path = DequeueableDataSourceTests;
+			path = AnyDataSourceTests;
 			sourceTree = "<group>";
 		};
 		F68F118E209CE1CA00BADC8D /* DequeuableViewModel */ = {
@@ -262,7 +262,7 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		F68F11AA209CFF7300BADC8D /* DequeueableDataSourceDemo */ = {
+		F68F11AA209CFF7300BADC8D /* AnyDataSourceDemo */ = {
 			isa = PBXGroup;
 			children = (
 				F68F11C9209CFFC900BADC8D /* Cells */,
@@ -273,15 +273,15 @@
 				F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */,
 				F68F11B7209CFF7400BADC8D /* Info.plist */,
 			);
-			path = DequeueableDataSourceDemo;
+			path = AnyDataSourceDemo;
 			sourceTree = "<group>";
 		};
-		F68F11BF209CFF7500BADC8D /* DequeueableDataSourceDemoTests */ = {
+		F68F11BF209CFF7500BADC8D /* AnyDataSourceDemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				F68F11C2209CFF7500BADC8D /* Info.plist */,
 			);
-			path = DequeueableDataSourceDemoTests;
+			path = AnyDataSourceDemoTests;
 			sourceTree = "<group>";
 		};
 		F68F11C9209CFFC900BADC8D /* Cells */ = {
@@ -307,9 +307,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F68F1172209CE0F600BADC8D /* DequeueableDataSource */ = {
+		F68F1172209CE0F600BADC8D /* AnyDataSource */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F68F1187209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSource" */;
+			buildConfigurationList = F68F1187209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSource" */;
 			buildPhases = (
 				F68F116E209CE0F600BADC8D /* Sources */,
 				F68F116F209CE0F600BADC8D /* Frameworks */,
@@ -322,14 +322,14 @@
 			);
 			dependencies = (
 			);
-			name = DequeueableDataSource;
+			name = AnyDataSource;
 			productName = ReusableDataSource;
-			productReference = F68F1173209CE0F600BADC8D /* DequeueableDataSource.framework */;
+			productReference = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F68F117B209CE0F600BADC8D /* DequeueableDataSourceTests */ = {
+		F68F117B209CE0F600BADC8D /* AnyDataSourceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F68F118A209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceTests" */;
+			buildConfigurationList = F68F118A209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceTests" */;
 			buildPhases = (
 				F68F1178209CE0F600BADC8D /* Sources */,
 				F68F1179209CE0F600BADC8D /* Frameworks */,
@@ -340,14 +340,14 @@
 			dependencies = (
 				F68F117F209CE0F600BADC8D /* PBXTargetDependency */,
 			);
-			name = DequeueableDataSourceTests;
+			name = AnyDataSourceTests;
 			productName = ReusableDataSourceTests;
-			productReference = F68F117C209CE0F600BADC8D /* DequeueableDataSourceTests.xctest */;
+			productReference = F68F117C209CE0F600BADC8D /* AnyDataSourceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F68F11A8209CFF7300BADC8D /* DequeueableDataSourceDemo */ = {
+		F68F11A8209CFF7300BADC8D /* AnyDataSourceDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceDemo" */;
+			buildConfigurationList = F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceDemo" */;
 			buildPhases = (
 				F68F11A5209CFF7300BADC8D /* Sources */,
 				F68F11A6209CFF7300BADC8D /* Frameworks */,
@@ -360,14 +360,14 @@
 			dependencies = (
 				F68F11D1209D052B00BADC8D /* PBXTargetDependency */,
 			);
-			name = DequeueableDataSourceDemo;
+			name = AnyDataSourceDemo;
 			productName = ReusableDataSourceDemo;
-			productReference = F68F11A9209CFF7300BADC8D /* DequeueableDataSourceDemo.app */;
+			productReference = F68F11A9209CFF7300BADC8D /* AnyDataSourceDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F68F11BB209CFF7400BADC8D /* DequeueableDataSourceDemoTests */ = {
+		F68F11BB209CFF7400BADC8D /* AnyDataSourceDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceDemoTests" */;
+			buildConfigurationList = F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceDemoTests" */;
 			buildPhases = (
 				F68F11B8209CFF7400BADC8D /* Sources */,
 				F68F11B9209CFF7400BADC8D /* Frameworks */,
@@ -378,9 +378,9 @@
 			dependencies = (
 				F68F11BE209CFF7500BADC8D /* PBXTargetDependency */,
 			);
-			name = DequeueableDataSourceDemoTests;
+			name = AnyDataSourceDemoTests;
 			productName = ReusableDataSourceDemoTests;
-			productReference = F68F11BC209CFF7400BADC8D /* DequeueableDataSourceDemoTests.xctest */;
+			productReference = F68F11BC209CFF7400BADC8D /* AnyDataSourceDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -410,7 +410,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F68F116D209CE0F600BADC8D /* Build configuration list for PBXProject "DequeueableDataSource" */;
+			buildConfigurationList = F68F116D209CE0F600BADC8D /* Build configuration list for PBXProject "AnyDataSource" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -423,10 +423,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F68F1172209CE0F600BADC8D /* DequeueableDataSource */,
-				F68F117B209CE0F600BADC8D /* DequeueableDataSourceTests */,
-				F68F11A8209CFF7300BADC8D /* DequeueableDataSourceDemo */,
-				F68F11BB209CFF7400BADC8D /* DequeueableDataSourceDemoTests */,
+				F68F1172209CE0F600BADC8D /* AnyDataSource */,
+				F68F117B209CE0F600BADC8D /* AnyDataSourceTests */,
+				F68F11A8209CFF7300BADC8D /* AnyDataSourceDemo */,
+				F68F11BB209CFF7400BADC8D /* AnyDataSourceDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -570,17 +570,17 @@
 /* Begin PBXTargetDependency section */
 		F68F117F209CE0F600BADC8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F68F1172209CE0F600BADC8D /* DequeueableDataSource */;
+			target = F68F1172209CE0F600BADC8D /* AnyDataSource */;
 			targetProxy = F68F117E209CE0F600BADC8D /* PBXContainerItemProxy */;
 		};
 		F68F11BE209CFF7500BADC8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F68F11A8209CFF7300BADC8D /* DequeueableDataSourceDemo */;
+			target = F68F11A8209CFF7300BADC8D /* AnyDataSourceDemo */;
 			targetProxy = F68F11BD209CFF7500BADC8D /* PBXContainerItemProxy */;
 		};
 		F68F11D1209D052B00BADC8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F68F1172209CE0F600BADC8D /* DequeueableDataSource */;
+			target = F68F1172209CE0F600BADC8D /* AnyDataSource */;
 			targetProxy = F68F11D0209D052B00BADC8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -739,7 +739,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DequeueableDataSource/Info.plist;
+				INFOPLIST_FILE = AnyDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -747,7 +747,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rep.DequeueableDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.AnyDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -769,7 +769,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DequeueableDataSource/Info.plist;
+				INFOPLIST_FILE = AnyDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +777,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rep.DequeueableDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.AnyDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -886,7 +886,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DequeueableDataSourceDemo.app/DequeueableDataSourceDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnyDataSourceDemo.app/AnyDataSourceDemo";
 			};
 			name = Debug;
 		};
@@ -907,14 +907,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DequeueableDataSourceDemo.app/DequeueableDataSourceDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnyDataSourceDemo.app/AnyDataSourceDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F68F116D209CE0F600BADC8D /* Build configuration list for PBXProject "DequeueableDataSource" */ = {
+		F68F116D209CE0F600BADC8D /* Build configuration list for PBXProject "AnyDataSource" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F68F1185209CE0F600BADC8D /* Debug */,
@@ -923,7 +923,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F68F1187209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSource" */ = {
+		F68F1187209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSource" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F68F1188209CE0F600BADC8D /* Debug */,
@@ -932,7 +932,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F68F118A209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceTests" */ = {
+		F68F118A209CE0F600BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F68F118B209CE0F600BADC8D /* Debug */,
@@ -941,7 +941,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceDemo" */ = {
+		F68F11C3209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F68F11C4209CFF7500BADC8D /* Debug */,
@@ -950,7 +950,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "DequeueableDataSourceDemoTests" */ = {
+		F68F11C6209CFF7500BADC8D /* Build configuration list for PBXNativeTarget "AnyDataSourceDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F68F11C7209CFF7500BADC8D /* Debug */,

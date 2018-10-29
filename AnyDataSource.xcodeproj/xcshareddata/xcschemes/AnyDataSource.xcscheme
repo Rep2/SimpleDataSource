@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F68F1172209CE0F600BADC8D"
-               BuildableName = "DequeueableDataSource.framework"
-               BlueprintName = "DequeueableDataSource"
-               ReferencedContainer = "container:DequeueableDataSource.xcodeproj">
+               BuildableName = "AnyDataSource.framework"
+               BlueprintName = "AnyDataSource"
+               ReferencedContainer = "container:AnyDataSource.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F68F117B209CE0F600BADC8D"
-               BuildableName = "DequeueableDataSourceTests.xctest"
-               BlueprintName = "DequeueableDataSourceTests"
-               ReferencedContainer = "container:DequeueableDataSource.xcodeproj">
+               BuildableName = "AnyDataSourceTests.xctest"
+               BlueprintName = "AnyDataSourceTests"
+               ReferencedContainer = "container:AnyDataSource.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F68F1172209CE0F600BADC8D"
-            BuildableName = "DequeueableDataSource.framework"
-            BlueprintName = "DequeueableDataSource"
-            ReferencedContainer = "container:DequeueableDataSource.xcodeproj">
+            BuildableName = "AnyDataSource.framework"
+            BlueprintName = "AnyDataSource"
+            ReferencedContainer = "container:AnyDataSource.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F68F1172209CE0F600BADC8D"
-            BuildableName = "DequeueableDataSource.framework"
-            BlueprintName = "DequeueableDataSource"
-            ReferencedContainer = "container:DequeueableDataSource.xcodeproj">
+            BuildableName = "AnyDataSource.framework"
+            BlueprintName = "AnyDataSource"
+            ReferencedContainer = "container:AnyDataSource.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F68F1172209CE0F600BADC8D"
-            BuildableName = "DequeueableDataSource.framework"
-            BlueprintName = "DequeueableDataSource"
-            ReferencedContainer = "container:DequeueableDataSource.xcodeproj">
+            BuildableName = "AnyDataSource.framework"
+            BlueprintName = "AnyDataSource"
+            ReferencedContainer = "container:AnyDataSource.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
