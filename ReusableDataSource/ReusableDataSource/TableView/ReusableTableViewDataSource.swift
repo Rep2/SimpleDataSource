@@ -1,41 +1,46 @@
 import UIKit
 
-open class ReusableTableViewDataSource: NSObject {
-    var presentableViewModels = [[AnyTableViewPresentableViewModel]]()
+public protocol ReusableTableViewDataSource: UITableViewDataSource {
+    var viewModels: [[AnyTableViewPresentableViewModel]] { get set }
 
-    public var automaticallyRegisterReuseIdentifiers: Bool
+    var automaticallyRegisterReuseIdentifiers: Bool { get }
 
-    public init(automaticallyRegisterReuseIdentifiers: Bool = true) {
-        self.automaticallyRegisterReuseIdentifiers = automaticallyRegisterReuseIdentifiers
+    func reload(viewModels: [[AnyTableViewPresentableViewModel]], onTableView tableView: UITableView)
+    func reload(viewModels: [AnyTableViewPresentableViewModel], onTableView tableView: UITableView)
+}
+
+extension ReusableTableViewDataSource {
+    var automaticallyRegisterReuseIdentifiers: Bool {
+        return true
     }
 
-    public func present(presentableViewModels: [AnyTableViewPresentableViewModel], on tableView: UITableView) {
-        present(presentableViewModels: [presentableViewModels], on: tableView)
-    }
-
-    public func present(presentableViewModels: [[AnyTableViewPresentableViewModel]], on tableView: UITableView) {
-        self.presentableViewModels = presentableViewModels
+    func reload(viewModels: [[AnyTableViewPresentableViewModel]], onTableView tableView: UITableView) {
+        self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
-            presentableViewModels
+            viewModels
                 .flatMap { $0 }
                 .forEach { $0.registerCellCallback(tableView) }
         }
 
         tableView.reloadData()
     }
+
+    func reload(viewModels: [AnyTableViewPresentableViewModel], onTableView tableView: UITableView) {
+        reload(viewModels: [viewModels], onTableView: tableView)
+    }
 }
 
-extension ReusableTableViewDataSource: UITableViewDataSource {
-    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView, indexPath)
+extension ReusableTableViewDataSource {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(tableView, indexPath)
     }
 
-    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presentableViewModels[section].count
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels[section].count
     }
 
-    open func numberOfSections(in tableView: UITableView) -> Int {
-        return presentableViewModels.count
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModels.count
     }
 }

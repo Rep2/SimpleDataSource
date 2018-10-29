@@ -1,41 +1,46 @@
 import UIKit
 
-open class ReusableCollectionViewDataSource: NSObject {
-    var presentableViewModels = [[AnyCollectionViewPresentableViewModel]]()
+public protocol ReusableCollectionViewDataSource: UICollectionViewDataSource {
+    var viewModels: [[AnyCollectionViewPresentableViewModel]] { get set }
 
-    public var automaticallyRegisterReuseIdentifiers: Bool
+    var automaticallyRegisterReuseIdentifiers: Bool { get }
 
-    public init(automaticallyRegisterReuseIdentifiers: Bool = true) {
-        self.automaticallyRegisterReuseIdentifiers = automaticallyRegisterReuseIdentifiers
+    func reload(viewModels: [[AnyCollectionViewPresentableViewModel]], onCollectionView collectionView: UICollectionView)
+    func reload(viewModels: [AnyCollectionViewPresentableViewModel], onCollectionView collectionView: UICollectionView)
+}
+
+extension ReusableCollectionViewDataSource {
+    var automaticallyRegisterReuseIdentifiers: Bool {
+        return true
     }
 
-    public func present(presentableViewModels: [AnyCollectionViewPresentableViewModel], on collectionView: UICollectionView) {
-        present(presentableViewModels: [presentableViewModels], on: collectionView)
-    }
-
-    public func present(presentableViewModels: [[AnyCollectionViewPresentableViewModel]], on collectionView: UICollectionView) {
-        self.presentableViewModels = presentableViewModels
+    func reload(viewModels: [[AnyCollectionViewPresentableViewModel]], onCollectionView collectionView: UICollectionView) {
+        self.viewModels = viewModels
 
         if automaticallyRegisterReuseIdentifiers {
-            presentableViewModels
+            viewModels
                 .flatMap { $0 }
                 .forEach { $0.registerCellCallback(collectionView) }
         }
 
         collectionView.reloadData()
     }
+
+    func reload(viewModels: [AnyCollectionViewPresentableViewModel], onCollectionView collectionView: UICollectionView) {
+        reload(viewModels: [viewModels], onCollectionView: collectionView)
+    }
 }
 
-extension ReusableCollectionViewDataSource: UICollectionViewDataSource {
-    open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return presentableViewModels[section].count
+extension ReusableCollectionViewDataSource {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView, indexPath)
     }
 
-    open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return presentableViewModels[indexPath.section][indexPath.row].dequeueAndPresentCellCallback(collectionView, indexPath)
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModels[section].count
     }
 
-    open func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return presentableViewModels.count
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModels.count
     }
 }
