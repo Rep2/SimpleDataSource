@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FCB2186819F00C178AA /* CellSource.framework */; };
-		F6149FCE218681A200C178AA /* TableViewCellSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */; };
 		F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */; };
 		F6149FF0218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */; };
 		F6149FF2218694FF00C178AA /* CollectionViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */; };
 		F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */; };
+		F6149FF6218696C300C178AA /* TableViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */; };
 		F68F117D209CE0F600BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */; };
@@ -76,6 +76,7 @@
 		F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionViewSimpleDequeue.framework; path = Carthage/Build/iOS/CollectionViewSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewSimpleDequeue.framework; sourceTree = "<group>"; };
 		F68F1173209CE0F600BADC8D /* ReusableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReusableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1176209CE0F600BADC8D /* ReusableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReusableDataSource.h; sourceTree = "<group>"; };
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,8 +106,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */,
-				F6149FCE218681A200C178AA /* TableViewCellSimpleDequeue.framework in Frameworks */,
 				F6149FF2218694FF00C178AA /* CollectionViewSimpleDequeue.framework in Frameworks */,
+				F6149FF6218696C300C178AA /* TableViewSimpleDequeue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +140,7 @@
 		F6149FCA2186819F00C178AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */,
 				F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */,
 				F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */,
 				F6149FCB2186819F00C178AA /* CellSource.framework */,
@@ -453,7 +455,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/TableViewCellSimpleDequeue.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/TableViewSimpleDequeue.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CollectionViewSimpleDequeue.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CellSource.framework",
 			);

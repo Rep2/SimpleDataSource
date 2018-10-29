@@ -7,3 +7,6 @@
 [submodule "Carthage/Checkouts/CollectionViewSimpleDequeue"]
 	path = Carthage/Checkouts/CollectionViewSimpleDequeue
 	url = https://github.com/Rep2/CollectionViewSimpleDequeue.git
+[submodule "Carthage/Checkouts/TableViewSimpleDequeue"]
+	path = Carthage/Checkouts/TableViewSimpleDequeue
+	url = https://github.com/Rep2/TableViewSimpleDequeue.git
