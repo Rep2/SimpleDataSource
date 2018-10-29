@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60B34D621878162001454CD /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D421878162001454CD /* ActorTableViewCell.swift */; };
+		F60B34D721878162001454CD /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D521878162001454CD /* MovieTableViewCell.swift */; };
+		F60B34DB21878167001454CD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D921878167001454CD /* Movie.swift */; };
+		F60B34DC21878167001454CD /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DA21878167001454CD /* Actor.swift */; };
+		F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */; };
 		F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FCB2186819F00C178AA /* CellSource.framework */; };
 		F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */; };
 		F6149FF0218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */; };
@@ -25,8 +30,6 @@
 		F68F11B1209CFF7300BADC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11AF209CFF7300BADC8D /* Main.storyboard */; };
 		F68F11B3209CFF7400BADC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B2209CFF7400BADC8D /* Assets.xcassets */; };
 		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
-		F68F11CC209CFFC900BADC8D /* ImageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */; };
-		F68F11CD209CFFC900BADC8D /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */; };
 		F68F11CE209D052B00BADC8D /* AnyDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */; };
 		F68F11CF209D052B00BADC8D /* AnyDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* AnyDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D4AC1021869D0C0046C39D /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC0F21869D0C0046C39D /* CellSource.framework */; };
@@ -79,6 +82,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F60B34D421878162001454CD /* ActorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
+		F60B34D521878162001454CD /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		F60B34D921878167001454CD /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F60B34DA21878167001454CD /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StevenSeagalDataSource.swift; sourceTree = "<group>"; };
 		F6149FCB2186819F00C178AA /* CellSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CellSource.framework; path = Carthage/Build/iOS/CellSource.framework; sourceTree = "<group>"; };
 		F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewCellSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewCellSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeuableTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -105,8 +113,6 @@
 		F68F11B7209CFF7400BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F11BC209CFF7400BADC8D /* AnyDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnyDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11C2209CFF7500BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextTableViewCell.swift; sourceTree = "<group>"; };
-		F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		F6D4AC0F21869D0C0046C39D /* CellSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CellSource.framework; path = Carthage/Build/iOS/CellSource.framework; sourceTree = "<group>"; };
 		F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionViewSimpleDequeue.framework; path = Carthage/Build/iOS/CollectionViewSimpleDequeue.framework; sourceTree = "<group>"; };
@@ -152,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60B34D821878167001454CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F60B34D921878167001454CD /* Movie.swift */,
+				F60B34DA21878167001454CD /* Actor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F6149FCA2186819F00C178AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +280,10 @@
 		F68F11AA209CFF7300BADC8D /* AnyDataSourceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F60B34D821878167001454CD /* Models */,
 				F68F11C9209CFFC900BADC8D /* Cells */,
 				F68F11AB209CFF7300BADC8D /* AppDelegate.swift */,
+				F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */,
 				F68F11AD209CFF7300BADC8D /* ViewController.swift */,
 				F68F11AF209CFF7300BADC8D /* Main.storyboard */,
 				F68F11B2209CFF7400BADC8D /* Assets.xcassets */,
@@ -287,8 +304,8 @@
 		F68F11C9209CFFC900BADC8D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F68F11CA209CFFC900BADC8D /* ImageTextTableViewCell.swift */,
-				F68F11CB209CFFC900BADC8D /* TextTableViewCell.swift */,
+				F60B34D421878162001454CD /* ActorTableViewCell.swift */,
+				F60B34D521878162001454CD /* MovieTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -512,6 +529,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/TableViewSimpleDequeue.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CollectionViewSimpleDequeue.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CellSource.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -551,10 +569,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F11CD209CFFC900BADC8D /* TextTableViewCell.swift in Sources */,
 				F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */,
-				F68F11CC209CFFC900BADC8D /* ImageTextTableViewCell.swift in Sources */,
+				F60B34D621878162001454CD /* ActorTableViewCell.swift in Sources */,
+				F60B34D721878162001454CD /* MovieTableViewCell.swift in Sources */,
+				F60B34DC21878167001454CD /* Actor.swift in Sources */,
 				F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */,
+				F60B34DB21878167001454CD /* Movie.swift in Sources */,
+				F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

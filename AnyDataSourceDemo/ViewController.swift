@@ -1,4 +1,4 @@
-import DequeueableDataSource
+import AnyDataSource
 import UIKit
 
 class ViewController: UITableViewController {
