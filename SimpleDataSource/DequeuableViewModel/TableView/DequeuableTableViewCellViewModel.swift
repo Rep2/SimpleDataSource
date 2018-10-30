@@ -16,9 +16,7 @@ extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell,
 
         return cell
     }
-}
 
-extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell {
     public func registerTableViewCell(onTableView tableView: UITableView) {
         tableView.register(cell: TableViewCell.self, reusableCellSource: TableViewCell.source)
     }

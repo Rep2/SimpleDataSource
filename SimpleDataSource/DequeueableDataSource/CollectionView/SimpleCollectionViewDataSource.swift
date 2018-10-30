@@ -1,6 +1,6 @@
 import UIKit
 
-open class AnyCollectionViewDataSource: NSObject {
+open class SimpleCollectionViewDataSource: NSObject {
     open var viewModels = [[AnyDequeuableCollectionViewCellViewModel]]()
 
     open var automaticallyRegisterReuseIdentifiers: Bool
@@ -28,7 +28,7 @@ open class AnyCollectionViewDataSource: NSObject {
     }
 }
 
-extension AnyCollectionViewDataSource: UICollectionViewDataSource {
+extension SimpleCollectionViewDataSource: UICollectionViewDataSource {
     open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return viewModels[indexPath.section][indexPath.row].dequeueAndPresentCell(collectionView, indexPath)
     }
