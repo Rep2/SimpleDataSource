@@ -1,8 +1,8 @@
-import AnyDataSource
+import SimpleDataSource
 import UIKit
 
 class ViewController: UITableViewController {
-    lazy var dataSource = AnyTableViewDataSource()
+    lazy var dataSource = SimpleTableViewDataSource()
 
     var viewModels: [[AnyDequeuableTableViewCellViewModel]] = {
         return BestMoviesEverDataSource

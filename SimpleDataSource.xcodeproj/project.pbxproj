@@ -158,13 +158,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F60B34D821878167001454CD /* Models */ = {
+		F60B34D821878167001454CD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				F60B34D921878167001454CD /* Movie.swift */,
 				F60B34DA21878167001454CD /* Actor.swift */,
 			);
-			path = Models;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F6149FCA2186819F00C178AA /* Frameworks */ = {
@@ -280,7 +280,7 @@
 		F68F11AA209CFF7300BADC8D /* SimpleDataSourceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F60B34D821878167001454CD /* Models */,
+				F60B34D821878167001454CD /* ViewModels */,
 				F68F11C9209CFFC900BADC8D /* Cells */,
 				F68F11AB209CFF7300BADC8D /* AppDelegate.swift */,
 				F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */,

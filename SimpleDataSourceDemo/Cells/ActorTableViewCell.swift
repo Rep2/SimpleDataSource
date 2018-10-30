@@ -1,6 +1,6 @@
 import UIKit
 import SnapKit
-import AnyDataSource
+import SimpleDataSource
 
 class ActorTableViewCell: UITableViewCell {
     lazy var nameLabel = UILabel(frame: .zero)

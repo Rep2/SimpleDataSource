@@ -1,5 +1,5 @@
 import UIKit
-import AnyDataSource
+import SimpleDataSource
 
 struct Actor {
     let name: String

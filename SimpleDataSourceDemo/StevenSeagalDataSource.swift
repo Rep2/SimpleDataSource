@@ -1,4 +1,4 @@
-import AnyDataSource
+import SimpleDataSource
 
 class BestMoviesEverDataSource {
     static let movies = [
