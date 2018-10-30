@@ -1,48 +1,92 @@
-# ReusableDataSource
+# SimpleDataSource
 
-Never again write a custom UITableView or UICollectionView data source. **Disclamer**: not really, but this is a good start.
+Simplifies data source implementation by reorganising responsibilities and using a data driven approach. Improves reusability and decreases the amount of boilerplate.
 
-## Implementation
+## Usage
 
-Implement ```ReusablePresenter``` protocol on a reusable view.
+Responsibilitie reorganisation starts with moving the view model presentation to the cell.
 
 ```Swift
-class TextTableViewCell: UITableViewCell, ReusablePresenter {
-    func present(viewModel: String) {
-        textLabel?.text = viewModel
+struct MovieViewModel {
+    let name: String
+    let releaseYear: Int
+}
+
+class MovieTableViewCell: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var releaseYearLabel: UILabel!
+    ...
+}
+
+extension MovieTableViewCell: PresentingTableViewCell {
+    func present(viewModel: MovieViewModel) {
+        nameLabel.text = viewModel.name
+        releaseYearLabel.text = String(viewModel.releaseYear)
     }
 }
 ```
 
-Create view models and specify presenter types using ```ReusableViewModel``` struct.
+Next, specify the cell type that should be registered and dequeued for a particular view model. To be able to use the default implementations, ```TableViewCell.ViewModel``` must equal ```Self```.
 
 ```Swift
-let viewModels = [
-    ReusableViewModel<TextTableViewCell>(viewModel: "Cell 1").anyPresentable,
-    ReusableViewModel<TextTableViewCell>(viewModel: "Cell 2").anyPresentable,
-    ReusableViewModel<ImageTextTableViewCell>(
-        viewModel: ImageTextTableViewCellViewModel(
-            textViewModel: "Cell 3", 
-            imageViewModel: #imageLiteral(resourceName: "filter")
+extension ActorViewModel: DequeuableTableViewCellViewModel {
+    typealias TableViewCell = ActorTableViewCell
+}
+```
+
+Instead of implementing a custom ```UITableViewDataSource```, we will use ```AnyTableViewDataSource```. We simply initialise and set it as the tableViews dataSource.
+
+```Swift
+class MovieViewController: UITableViewController {
+    lazy var dataSource = SimpleTableViewDataSource()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.dataSource = dataSource
+    }
+}
+```
+
+Finlly, map and present the data. To map data from view model to ```AnyDequeuableTableViewCellViewModel```  we can use ```tableViewPresentable``` computed property.
+
+```Swift
+class MovieViewController: UITableViewController {
+    ...
+    let movies = [
+        MovieViewModel(name: "Above the Law", releaseYear: 1988, actors: [
+            ActorViewModel(name: "Steven Seagal"),
+            ActorViewModel(name: "Pam Grier"),
+            ActorViewModel(name: "Henry Silva")
+            ]
+        ),
+        MovieViewModel(name: "Under Siege", releaseYear: 1992, actors: [
+            ActorViewModel(name: "Steven Seagal"),
+            ActorViewModel(name: "Gary Busey"),
+            ActorViewModel(name: "Tommy Lee Jones")
+            ]
         )
-    ).anyPresentable,
-    ReusableViewModel<TextTableViewCell>(viewModel: "Cell 2").anyPresentable
-]
+    ]
+    
+    func presentCellViewModels() {
+        let cellViewModels = movies
+            .map { movie -> [AnyDequeuableTableViewCellViewModel] in
+                var movieViewModels = [movie.tableViewPresentable]
+
+                movieViewModels.append(contentsOf: movie.actors.map { $0.tableViewPresentable })
+
+                return movieViewModels
+            }
+
+        dataSource.present(viewModels: cellViewModels, onTableView: tableView)
+    }
 ```
 
-Create a ```ReusableTableViewDataSource``` and present the view models.
+That's it! Check it out by running the demo project.
 
-```Swift
-let dataSource = ReusableTableViewDataSource()
+![Demo project screenshot](https://github.com/Rep2/SimpleDataSource/SimpleDataSourceDemo/DemoScreenshot.png)
 
-tableView.dataSource = dataSource
-
-dataSource.present(presentableViewModels: reusableViewModels, on: tableView)
-```
-
-That's it! The reusable data source manages the cell creation and data presentation. Check it out by running the demo project.
-
-![Demo project](https://image.ibb.co/g9BT3n/Screen_Shot_2018_05_04_at_23_51_30.png)
+For a more detailed showcase, take a look at this [blog post](https://medium.com/p/86d83a24b620).
 
 ## Installation
 
