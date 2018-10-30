@@ -15,7 +15,7 @@ class ActorTableViewCell: UITableViewCell {
 }
 
 extension ActorTableViewCell: PresentingTableViewCell {
-    func present(viewModel: Actor) {
+    func present(viewModel: ActorViewModel) {
         if nameLabel.superview == nil {
             setupCell()
         }

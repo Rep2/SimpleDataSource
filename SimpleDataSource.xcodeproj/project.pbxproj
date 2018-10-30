@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		F60B34D621878162001454CD /* ActorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D421878162001454CD /* ActorTableViewCell.swift */; };
 		F60B34D721878162001454CD /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D521878162001454CD /* MovieTableViewCell.swift */; };
-		F60B34DB21878167001454CD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D921878167001454CD /* Movie.swift */; };
-		F60B34DC21878167001454CD /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DA21878167001454CD /* Actor.swift */; };
+		F60B34DB21878167001454CD /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D921878167001454CD /* MovieViewModel.swift */; };
+		F60B34DC21878167001454CD /* ActorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DA21878167001454CD /* ActorViewModel.swift */; };
 		F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */; };
 		F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FCB2186819F00C178AA /* CellSource.framework */; };
 		F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */; };
@@ -26,7 +26,7 @@
 		F68F11A3209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119A209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift */; };
 		F68F11A4209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119B209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift */; };
 		F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11AB209CFF7300BADC8D /* AppDelegate.swift */; };
-		F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11AD209CFF7300BADC8D /* ViewController.swift */; };
+		F68F11AE209CFF7300BADC8D /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F11AD209CFF7300BADC8D /* MovieViewController.swift */; };
 		F68F11B1209CFF7300BADC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11AF209CFF7300BADC8D /* Main.storyboard */; };
 		F68F11B3209CFF7400BADC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B2209CFF7400BADC8D /* Assets.xcassets */; };
 		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
@@ -84,8 +84,8 @@
 /* Begin PBXFileReference section */
 		F60B34D421878162001454CD /* ActorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorTableViewCell.swift; sourceTree = "<group>"; };
 		F60B34D521878162001454CD /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
-		F60B34D921878167001454CD /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		F60B34DA21878167001454CD /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		F60B34D921878167001454CD /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		F60B34DA21878167001454CD /* ActorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorViewModel.swift; sourceTree = "<group>"; };
 		F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StevenSeagalDataSource.swift; sourceTree = "<group>"; };
 		F6149FCB2186819F00C178AA /* CellSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CellSource.framework; path = Carthage/Build/iOS/CellSource.framework; sourceTree = "<group>"; };
 		F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewCellSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewCellSimpleDequeue.framework; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		F68F119B209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDequeuableCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		F68F11A9209CFF7300BADC8D /* SimpleDataSourceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDataSourceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11AB209CFF7300BADC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F68F11AD209CFF7300BADC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F68F11AD209CFF7300BADC8D /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		F68F11B0209CFF7300BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F68F11B2209CFF7400BADC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F68F11B5209CFF7400BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 		F60B34D821878167001454CD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F60B34D921878167001454CD /* Movie.swift */,
-				F60B34DA21878167001454CD /* Actor.swift */,
+				F60B34D921878167001454CD /* MovieViewModel.swift */,
+				F60B34DA21878167001454CD /* ActorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				F68F11C9209CFFC900BADC8D /* Cells */,
 				F68F11AB209CFF7300BADC8D /* AppDelegate.swift */,
 				F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */,
-				F68F11AD209CFF7300BADC8D /* ViewController.swift */,
+				F68F11AD209CFF7300BADC8D /* MovieViewController.swift */,
 				F68F11AF209CFF7300BADC8D /* Main.storyboard */,
 				F68F11B2209CFF7400BADC8D /* Assets.xcassets */,
 				F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */,
@@ -569,12 +569,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F11AE209CFF7300BADC8D /* ViewController.swift in Sources */,
+				F68F11AE209CFF7300BADC8D /* MovieViewController.swift in Sources */,
 				F60B34D621878162001454CD /* ActorTableViewCell.swift in Sources */,
 				F60B34D721878162001454CD /* MovieTableViewCell.swift in Sources */,
-				F60B34DC21878167001454CD /* Actor.swift in Sources */,
+				F60B34DC21878167001454CD /* ActorViewModel.swift in Sources */,
 				F68F11AC209CFF7300BADC8D /* AppDelegate.swift in Sources */,
-				F60B34DB21878167001454CD /* Movie.swift in Sources */,
+				F60B34DB21878167001454CD /* MovieViewModel.swift in Sources */,
 				F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -860,7 +860,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SimpleDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SimpleDataSourceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -883,7 +883,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SimpleDataSource;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SimpleDataSourceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

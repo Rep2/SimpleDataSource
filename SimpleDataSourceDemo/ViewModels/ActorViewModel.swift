@@ -1,10 +1,10 @@
 import UIKit
 import SimpleDataSource
 
-struct Actor {
+struct ActorViewModel {
     let name: String
 }
 
-extension Actor: DequeuableTableViewCellViewModel {
+extension ActorViewModel: DequeuableTableViewCellViewModel {
     typealias TableViewCell = ActorTableViewCell
 }

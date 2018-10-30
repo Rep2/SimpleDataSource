@@ -1,13 +1,13 @@
 import UIKit
 import SimpleDataSource
 
-struct Movie {
+struct MovieViewModel {
     let name: String
     let releaseYear: Int
 
-    let actors: [Actor]
+    let actors: [ActorViewModel]
 }
 
-extension Movie: DequeuableTableViewCellViewModel {
+extension MovieViewModel: DequeuableTableViewCellViewModel {
     typealias TableViewCell = MovieTableViewCell
 }

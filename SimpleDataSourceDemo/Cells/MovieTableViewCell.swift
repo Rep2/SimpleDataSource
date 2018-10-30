@@ -29,7 +29,7 @@ class MovieTableViewCell: UITableViewCell {
 }
 
 extension MovieTableViewCell: PresentingTableViewCell {
-    func present(viewModel: Movie) {
+    func present(viewModel: MovieViewModel) {
         if nameLabel.superview == nil {
             setupCell()
         }
