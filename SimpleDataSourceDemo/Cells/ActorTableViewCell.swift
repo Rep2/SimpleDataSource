@@ -9,7 +9,7 @@ class ActorTableViewCell: UITableViewCell {
         addSubview(nameLabel)
 
         nameLabel.snp.makeConstraints { make in
-            make.left.right.top.equalToSuperview().inset(UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16))
+            make.left.right.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16))
         }
     }
 }

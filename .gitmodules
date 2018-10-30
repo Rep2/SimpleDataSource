@@ -7,3 +7,6 @@
 [submodule "Carthage/Checkouts/TableViewSimpleDequeue"]
 	path = Carthage/Checkouts/TableViewSimpleDequeue
 	url = https://github.com/Rep2/TableViewSimpleDequeue.git
+[submodule "Carthage/Checkouts/SnapKit"]
+	path = Carthage/Checkouts/SnapKit
+	url = https://github.com/SnapKit/SnapKit.git

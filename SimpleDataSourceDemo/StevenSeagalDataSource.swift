@@ -1,7 +1,7 @@
 import AnyDataSource
 
-class StevenSeagalMoviesDataSource {
-    static let bestMoviesEver = [
+class BestMoviesEverDataSource {
+    static let movies = [
         Movie(name: "Above the Law", releaseYear: 1988, actors: [
             Actor(name: "Steven Seagal"),
             Actor(name: "Pam Grier"),
@@ -40,13 +40,4 @@ class StevenSeagalMoviesDataSource {
             ]
         )
     ]
-
-    static let movieTableViewCellModels: [[AnyDequeuableTableViewCellViewModel]] {
-        return bestMoviesEver.map {
-            return [
-                $0.tableViewPresentable,
-                $0.actors.flatMap { $0.tableViewPresentable }
-            ]
-        }
-    }
 }
