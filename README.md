@@ -36,7 +36,7 @@ extension ActorViewModel: DequeuableTableViewCellViewModel {
 }
 ```
 
-Instead of implementing a custom ```UITableViewDataSource```, we will use ```AnyTableViewDataSource```. We simply initialise and set it as the tableViews dataSource.
+Instead of implementing a custom ```UITableViewDataSource```, we will use ```SimpleTableViewDataSource```. We simply initialise and set it as the tableViews dataSource.
 
 ```Swift
 class MovieViewController: UITableViewController {
