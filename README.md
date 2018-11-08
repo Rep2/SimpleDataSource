@@ -6,7 +6,7 @@ Simplifies data source implementation by reorganising responsibilities and using
 
 *Note: For simplicity I'll be addressing UITableView only, but everything, including framework support, extends to UICollectionView*
 
-Responsibilitie reorganisation starts with moving the view model presentation to the cell.
+Responsibility reorganisation starts with moving the view model presentation to the cell.
 
 ```Swift
 struct MovieViewModel {
