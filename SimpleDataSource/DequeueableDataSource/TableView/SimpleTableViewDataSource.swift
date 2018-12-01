@@ -4,6 +4,7 @@ open class SimpleTableViewDataSource: NSObject {
     open var viewModels = [[AnyDequeuableTableViewCellViewModel]]()
 
     open var automaticallyRegisterReuseIdentifiers: Bool
+    open var headerTitle = [String]()
 
     public init(automaticallyRegisterReuseIdentifiers: Bool = true) {
         self.automaticallyRegisterReuseIdentifiers = automaticallyRegisterReuseIdentifiers
@@ -39,5 +40,11 @@ extension SimpleTableViewDataSource: UITableViewDataSource {
 
     open func numberOfSections(in tableView: UITableView) -> Int {
         return viewModels.count
+    }
+
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard section >= 0 && section < headerTitle.count else { return nil }
+
+        return headerTitle[section]
     }
 }
