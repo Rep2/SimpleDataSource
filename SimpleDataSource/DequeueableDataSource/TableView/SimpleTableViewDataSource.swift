@@ -42,7 +42,7 @@ extension SimpleTableViewDataSource: UITableViewDataSource {
         return viewModels.count
     }
 
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard section >= 0 && section < headerTitles.count else { return nil }
 
         return headerTitles[section]
