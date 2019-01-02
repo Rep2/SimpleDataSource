@@ -1,5 +1,3 @@
-import CellSource
-
 public protocol PresentingCollectionViewCell {
     associatedtype ViewModel: DequeuableCollectionViewCellViewModel
 

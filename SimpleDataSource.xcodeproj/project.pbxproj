@@ -12,12 +12,15 @@
 		F60B34DB21878167001454CD /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34D921878167001454CD /* MovieViewModel.swift */; };
 		F60B34DC21878167001454CD /* ActorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DA21878167001454CD /* ActorViewModel.swift */; };
 		F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */; };
-		F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FCB2186819F00C178AA /* CellSource.framework */; };
 		F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */; };
 		F6149FF0218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */; };
-		F6149FF2218694FF00C178AA /* CollectionViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */; };
 		F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */; };
-		F6149FF6218696C300C178AA /* TableViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */; };
+		F67DD71121DD7DC800EB7F36 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70A21DD7DC800EB7F36 /* UICollectionView.swift */; };
+		F67DD71221DD7DC800EB7F36 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70C21DD7DC800EB7F36 /* UITableView.swift */; };
+		F67DD71321DD7DC800EB7F36 /* CellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70D21DD7DC800EB7F36 /* CellSource.swift */; };
+		F67DD71421DD7DC800EB7F36 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F67DD70E21DD7DC800EB7F36 /* .swiftlint.yml */; };
+		F67DD71521DD7DC800EB7F36 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = F67DD70F21DD7DC800EB7F36 /* .gitmodules */; };
+		F67DD71621DD7DC800EB7F36 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F67DD71021DD7DC800EB7F36 /* .gitignore */; };
 		F68F117D209CE0F600BADC8D /* SimpleDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* SimpleDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */; };
@@ -32,12 +35,6 @@
 		F68F11B6209CFF7400BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F11B4209CFF7400BADC8D /* LaunchScreen.storyboard */; };
 		F68F11CE209D052B00BADC8D /* SimpleDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* SimpleDataSource.framework */; };
 		F68F11CF209D052B00BADC8D /* SimpleDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* SimpleDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6D4AC1021869D0C0046C39D /* CellSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC0F21869D0C0046C39D /* CellSource.framework */; };
-		F6D4AC1121869D0C0046C39D /* CellSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC0F21869D0C0046C39D /* CellSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6D4AC1421869D150046C39D /* TableViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */; };
-		F6D4AC1521869D150046C39D /* TableViewSimpleDequeue.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6D4AC1621869D150046C39D /* CollectionViewSimpleDequeue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */; };
-		F6D4AC1721869D150046C39D /* CollectionViewSimpleDequeue.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6D4AC1721869D150046C39D /* CollectionViewSimpleDequeue.framework in Embed Frameworks */,
 				F68F11CF209D052B00BADC8D /* SimpleDataSource.framework in Embed Frameworks */,
-				F6D4AC1121869D0C0046C39D /* CellSource.framework in Embed Frameworks */,
-				F6D4AC1521869D150046C39D /* TableViewSimpleDequeue.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,13 +81,15 @@
 		F60B34D921878167001454CD /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		F60B34DA21878167001454CD /* ActorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorViewModel.swift; sourceTree = "<group>"; };
 		F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StevenSeagalDataSource.swift; sourceTree = "<group>"; };
-		F6149FCB2186819F00C178AA /* CellSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CellSource.framework; path = Carthage/Build/iOS/CellSource.framework; sourceTree = "<group>"; };
-		F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewCellSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewCellSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeuableTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
-		F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionViewSimpleDequeue.framework; path = Carthage/Build/iOS/CollectionViewSimpleDequeue.framework; sourceTree = "<group>"; };
 		F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingCollectionViewCell.swift; sourceTree = "<group>"; };
-		F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewSimpleDequeue.framework; sourceTree = "<group>"; };
+		F67DD70A21DD7DC800EB7F36 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F67DD70C21DD7DC800EB7F36 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F67DD70D21DD7DC800EB7F36 /* CellSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSource.swift; sourceTree = "<group>"; };
+		F67DD70E21DD7DC800EB7F36 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F67DD70F21DD7DC800EB7F36 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		F67DD71021DD7DC800EB7F36 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F68F1173209CE0F600BADC8D /* SimpleDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1176209CE0F600BADC8D /* ReusableDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReusableDataSource.h; sourceTree = "<group>"; };
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,9 +109,6 @@
 		F68F11B7209CFF7400BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F11BC209CFF7400BADC8D /* SimpleDataSourceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDataSourceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F11C2209CFF7500BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6D4AC0F21869D0C0046C39D /* CellSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CellSource.framework; path = Carthage/Build/iOS/CellSource.framework; sourceTree = "<group>"; };
-		F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TableViewSimpleDequeue.framework; path = Carthage/Build/iOS/TableViewSimpleDequeue.framework; sourceTree = "<group>"; };
-		F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CollectionViewSimpleDequeue.framework; path = Carthage/Build/iOS/CollectionViewSimpleDequeue.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6149FCC2186819F00C178AA /* CellSource.framework in Frameworks */,
-				F6149FF2218694FF00C178AA /* CollectionViewSimpleDequeue.framework in Frameworks */,
-				F6149FF6218696C300C178AA /* TableViewSimpleDequeue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D4AC1621869D150046C39D /* CollectionViewSimpleDequeue.framework in Frameworks */,
 				F68F11CE209D052B00BADC8D /* SimpleDataSource.framework in Frameworks */,
-				F6D4AC1021869D0C0046C39D /* CellSource.framework in Frameworks */,
-				F6D4AC1421869D150046C39D /* TableViewSimpleDequeue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +157,6 @@
 		F6149FCA2186819F00C178AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6149FF5218696C300C178AA /* TableViewSimpleDequeue.framework */,
-				F6149FF1218694FF00C178AA /* CollectionViewSimpleDequeue.framework */,
-				F6149FCD218681A100C178AA /* TableViewCellSimpleDequeue.framework */,
-				F6149FCB2186819F00C178AA /* CellSource.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,12 +181,38 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		F67DD70821DD7DC800EB7F36 /* SimpleDequeue */ = {
+			isa = PBXGroup;
+			children = (
+				F67DD70921DD7DC800EB7F36 /* CollectionViewSimpleDequeue */,
+				F67DD70B21DD7DC800EB7F36 /* TableViewSimpleDequeue */,
+				F67DD70D21DD7DC800EB7F36 /* CellSource.swift */,
+				F67DD70E21DD7DC800EB7F36 /* .swiftlint.yml */,
+				F67DD70F21DD7DC800EB7F36 /* .gitmodules */,
+				F67DD71021DD7DC800EB7F36 /* .gitignore */,
+			);
+			path = SimpleDequeue;
+			sourceTree = "<group>";
+		};
+		F67DD70921DD7DC800EB7F36 /* CollectionViewSimpleDequeue */ = {
+			isa = PBXGroup;
+			children = (
+				F67DD70A21DD7DC800EB7F36 /* UICollectionView.swift */,
+			);
+			path = CollectionViewSimpleDequeue;
+			sourceTree = "<group>";
+		};
+		F67DD70B21DD7DC800EB7F36 /* TableViewSimpleDequeue */ = {
+			isa = PBXGroup;
+			children = (
+				F67DD70C21DD7DC800EB7F36 /* UITableView.swift */,
+			);
+			path = TableViewSimpleDequeue;
+			sourceTree = "<group>";
+		};
 		F68F1169209CE0F600BADC8D = {
 			isa = PBXGroup;
 			children = (
-				F6D4AC1321869D140046C39D /* CollectionViewSimpleDequeue.framework */,
-				F6D4AC1221869D140046C39D /* TableViewSimpleDequeue.framework */,
-				F6D4AC0F21869D0C0046C39D /* CellSource.framework */,
 				F68F1175209CE0F600BADC8D /* SimpleDataSource */,
 				F68F11AA209CFF7300BADC8D /* SimpleDataSourceDemo */,
 				F68F11BF209CFF7500BADC8D /* SimpleDataSourceDemoTests */,
@@ -227,6 +236,7 @@
 		F68F1175209CE0F600BADC8D /* SimpleDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				F67DD70821DD7DC800EB7F36 /* SimpleDequeue */,
 				F68F118E209CE1CA00BADC8D /* DequeuableViewModel */,
 				F68F1195209CE1CB00BADC8D /* DequeueableDataSource */,
 				F68F1177209CE0F600BADC8D /* Info.plist */,
@@ -333,7 +343,6 @@
 				F68F1170209CE0F600BADC8D /* Headers */,
 				F68F1171209CE0F600BADC8D /* Resources */,
 				F68F118D209CE11D00BADC8D /* Swiftlint */,
-				F6149FC92186817500C178AA /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -453,6 +462,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67DD71521DD7DC800EB7F36 /* .gitmodules in Resources */,
+				F67DD71621DD7DC800EB7F36 /* .gitignore in Resources */,
+				F67DD71421DD7DC800EB7F36 /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,27 +495,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F6149FC92186817500C178AA /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/TableViewSimpleDequeue.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CollectionViewSimpleDequeue.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CellSource.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		F68F118D209CE11D00BADC8D /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,9 +541,12 @@
 				F68F11A1209CE1CB00BADC8D /* SimpleTableViewDataSource.swift in Sources */,
 				F68F11A2209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift in Sources */,
 				F68F11A4209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift in Sources */,
+				F67DD71121DD7DC800EB7F36 /* UICollectionView.swift in Sources */,
 				F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */,
 				F6149FF0218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift in Sources */,
 				F68F11A3209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift in Sources */,
+				F67DD71221DD7DC800EB7F36 /* UITableView.swift in Sources */,
+				F67DD71321DD7DC800EB7F36 /* CellSource.swift in Sources */,
 				F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */,
 				F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */,
 			);
@@ -757,10 +751,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SimpleDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -788,10 +779,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SimpleDataSource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -1,4 +1,3 @@
-import TableViewSimpleDequeue
 import UIKit
 
 public protocol DequeuableTableViewCellViewModel {

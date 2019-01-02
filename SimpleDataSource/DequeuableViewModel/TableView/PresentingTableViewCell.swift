@@ -1,5 +1,3 @@
-import CellSource
-
 public protocol PresentingTableViewCell {
     associatedtype ViewModel: DequeuableTableViewCellViewModel
 

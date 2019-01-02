@@ -1,4 +1,4 @@
-import CollectionViewSimpleDequeue
+import UIKit
 
 public protocol DequeuableCollectionViewCellViewModel {
     associatedtype CollectionViewCell: PresentingCollectionViewCell
