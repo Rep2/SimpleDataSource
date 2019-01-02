@@ -154,13 +154,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		F6149FCA2186819F00C178AA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F6149FED218694A800C178AA /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +211,6 @@
 				F68F11BF209CFF7500BADC8D /* SimpleDataSourceDemoTests */,
 				F68F1174209CE0F600BADC8D /* Products */,
 				F68F1180209CE0F600BADC8D /* SimpleDataSourceTests */,
-				F6149FCA2186819F00C178AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -743,7 +735,7 @@
 		F68F1188209CE0F600BADC8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -771,7 +763,7 @@
 		F68F1189209CE0F600BADC8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
