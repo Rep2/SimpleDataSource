@@ -14,7 +14,6 @@
 		F60B34DE2187816D001454CD /* StevenSeagalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */; };
 		F6149FD02186855D00C178AA /* DequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */; };
 		F6149FF0218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */; };
-		F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */; };
 		F67DD71121DD7DC800EB7F36 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70A21DD7DC800EB7F36 /* UICollectionView.swift */; };
 		F67DD71221DD7DC800EB7F36 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70C21DD7DC800EB7F36 /* UITableView.swift */; };
 		F67DD71321DD7DC800EB7F36 /* CellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67DD70D21DD7DC800EB7F36 /* CellSource.swift */; };
@@ -23,7 +22,6 @@
 		F67DD71621DD7DC800EB7F36 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F67DD71021DD7DC800EB7F36 /* .gitignore */; };
 		F68F117D209CE0F600BADC8D /* SimpleDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1173209CE0F600BADC8D /* SimpleDataSource.framework */; };
 		F68F1184209CE0F600BADC8D /* ReusableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F68F1176209CE0F600BADC8D /* ReusableDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */; };
 		F68F11A1209CE1CB00BADC8D /* SimpleTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1197209CE1CB00BADC8D /* SimpleTableViewDataSource.swift */; };
 		F68F11A2209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1198209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift */; };
 		F68F11A3209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F119A209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift */; };
@@ -83,7 +81,6 @@
 		F60B34DD2187816D001454CD /* StevenSeagalDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StevenSeagalDataSource.swift; sourceTree = "<group>"; };
 		F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DequeuableTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
-		F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F67DD70A21DD7DC800EB7F36 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F67DD70C21DD7DC800EB7F36 /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		F67DD70D21DD7DC800EB7F36 /* CellSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSource.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		F68F1177209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F117C209CE0F600BADC8D /* SimpleDataSourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDataSourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1183209CE0F600BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentingTableViewCell.swift; sourceTree = "<group>"; };
 		F68F1197209CE1CB00BADC8D /* SimpleTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewDataSource.swift; sourceTree = "<group>"; };
 		F68F1198209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyDequeuableTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F68F119A209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -159,7 +155,6 @@
 			children = (
 				F68F1198209CE1CB00BADC8D /* AnyDequeuableTableViewCellViewModel.swift */,
 				F6149FCF2186855C00C178AA /* DequeuableTableViewCellViewModel.swift */,
-				F68F118F209CE1CA00BADC8D /* PresentingTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -169,7 +164,6 @@
 			children = (
 				F68F119B209CE1CB00BADC8D /* AnyDequeuableCollectionViewCellViewModel.swift */,
 				F6149FEF218694EA00C178AA /* DequeuableCollectionViewCellViewModel.swift */,
-				F6149FF32186951500C178AA /* PresentingCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -539,8 +533,6 @@
 				F68F11A3209CE1CB00BADC8D /* SimpleCollectionViewDataSource.swift in Sources */,
 				F67DD71221DD7DC800EB7F36 /* UITableView.swift in Sources */,
 				F67DD71321DD7DC800EB7F36 /* CellSource.swift in Sources */,
-				F68F119C209CE1CB00BADC8D /* PresentingTableViewCell.swift in Sources */,
-				F6149FF42186951500C178AA /* PresentingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

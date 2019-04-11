@@ -1,25 +1,26 @@
 import UIKit
 
 public protocol DequeuableTableViewCellViewModel {
-    associatedtype TableViewCell: PresentingTableViewCell
+    associatedtype Cell: UITableViewCell
 
-    func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> TableViewCell
+    func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> Cell
     func registerTableViewCell(onTableView tableView: UITableView)
+    func configure(cell: Cell)
 }
 
-extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell, TableViewCell.ViewModel == Self {
-    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> TableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath) as TableViewCell
+extension DequeuableTableViewCellViewModel where Cell: UITableViewCell {
+    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> Cell {
+        let cell = tableView.dequeueReusableCell(for: indexPath) as Cell
 
-        cell.present(viewModel: self)
+        self.configure(cell: cell)
 
         return cell
     }
 }
 
-extension DequeuableTableViewCellViewModel where TableViewCell: UITableViewCell {
+extension DequeuableTableViewCellViewModel where Cell: UITableViewCell {
     public func registerTableViewCell(onTableView tableView: UITableView) {
-        tableView.register(cell: TableViewCell.self, reusableCellSource: TableViewCell.source)
+        tableView.register(cell: Cell.self, reusableCellSource: .class)
     }
 
     public var tableViewPresentable: AnyDequeuableTableViewCellViewModel {

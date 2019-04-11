@@ -1,25 +1,26 @@
 import UIKit
 
 public protocol DequeuableCollectionViewCellViewModel {
-    associatedtype CollectionViewCell: PresentingCollectionViewCell
+    associatedtype Cell: UICollectionViewCell
 
-    func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> CollectionViewCell
+    func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> Cell
     func registerTableViewCell(onCollectionView collectionView: UICollectionView)
+    func configure(cell: Cell)
 }
 
-extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UICollectionViewCell, CollectionViewCell.ViewModel == Self {
-    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> CollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath) as CollectionViewCell
+extension DequeuableCollectionViewCellViewModel where Cell: UICollectionViewCell {
+    public func dequeueReusableCell(forRowAt indexPath: IndexPath, onCollectionView collectionView: UICollectionView) -> Cell {
+        let cell = collectionView.dequeueReusableCell(for: indexPath) as Cell
 
-        cell.present(viewModel: self)
+        self.configure(cell: cell)
 
         return cell
     }
 }
 
-extension DequeuableCollectionViewCellViewModel where CollectionViewCell: UICollectionViewCell {
+extension DequeuableCollectionViewCellViewModel where Cell: UICollectionViewCell {
     public func registerTableViewCell(onCollectionView collectionView: UICollectionView) {
-        collectionView.register(cell: CollectionViewCell.self, reusableCellSource: CollectionViewCell.source)
+        collectionView.register(cell: Cell.self, reusableCellSource: .class)
     }
 
     public var collectionViewPresentable: AnyDequeuableCollectionViewCellViewModel {
