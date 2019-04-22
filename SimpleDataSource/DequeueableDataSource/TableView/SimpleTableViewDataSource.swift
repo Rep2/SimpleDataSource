@@ -48,3 +48,9 @@ extension SimpleTableViewDataSource: UITableViewDataSource {
         return headerTitles[section]
     }
 }
+
+extension SimpleTableViewDataSource: UITableViewDelegate {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModels[indexPath.section][indexPath.row].didTapCell?()
+    }
+}
