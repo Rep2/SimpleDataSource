@@ -3,12 +3,18 @@ import UIKit
 public protocol DequeuableTableViewCellViewModel {
     associatedtype Cell: UITableViewCell
 
+    var didTapCell: (() -> Void)? { get }
+
     func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> Cell
     func registerTableViewCell(onTableView tableView: UITableView)
     func configure(cell: Cell)
 }
 
 extension DequeuableTableViewCellViewModel where Cell: UITableViewCell {
+    public var didTapCell: (() -> Void)? {
+        return nil
+    }
+
     public func dequeueReusableCell(forRowAt indexPath: IndexPath, onTableView tableView: UITableView) -> Cell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as Cell
 
@@ -30,7 +36,8 @@ extension DequeuableTableViewCellViewModel where Cell: UITableViewCell {
             },
             registerCell: { (tableView: UITableView) in
                 self.registerTableViewCell(onTableView: tableView)
-            }
+            },
+            didTapCell: self.didTapCell
         )
     }
 }
