@@ -43,7 +43,7 @@ extension SimpleCollectionViewDataSource: UICollectionViewDataSource {
 }
 
 extension SimpleCollectionViewDataSource: UICollectionViewDelegate {
-    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModels[indexPath.section][indexPath.row].didTapCell?()
     }
 }
